@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Map = dynamic(() => import("@/components/maps/LeafletMap"), { ssr: false });
 
@@ -10,6 +10,28 @@ export default function PassengerHome() {
   const [destination, setDestination] = useState("");
   const [loading, setLoading] = useState(false);
   const [fareMsg, setFareMsg] = useState("");
+  const [center, setCenter] = useState<[number, number]>([12.9716, 77.5946]);
+  const [locStatus, setLocStatus] = useState("Locating you…");
+
+  useEffect(() => {
+    if (!navigator.geolocation || !window.isSecureContext) {
+      setLocStatus("Location needs localhost or HTTPS.");
+      return;
+    }
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        setCenter([pos.coords.latitude, pos.coords.longitude]);
+        setPickup((p) => p || "Current Location");
+        setLocStatus("Showing your current location.");
+      },
+      (err) =>
+        setLocStatus(
+          err.code === err.PERMISSION_DENIED
+            ? "Location permission denied — enable it in browser site settings."
+            : `Location error: ${err.message}`
+        )
+    );
+  }, []);
 
   async function book() {
     setLoading(true);
@@ -55,7 +77,8 @@ export default function PassengerHome() {
         {fareMsg && <p className="text-sm text-slate-700">{fareMsg}</p>}
       </section>
       <section className="h-72 flex-1 md:h-auto">
-        <Map center={[12.9716, 77.5946]} pickup={[12.9716, 77.5946]} destination={[12.9352, 77.6245]} />
+        <p className="bg-white px-4 py-1.5 text-xs text-slate-500">{locStatus}</p>
+        <Map key={center.join(",")} center={center} pickup={center} destination={[12.9352, 77.6245]} />
       </section>
     </main>
   );
