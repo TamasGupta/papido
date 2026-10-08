@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import LocationTracker from "@/components/LocationTracker";
 
 export default function RiderDashboard() {
   const [online, setOnline] = useState<boolean | null>(null);
@@ -34,6 +35,7 @@ export default function RiderDashboard() {
           {online === null ? "Go Online" : online ? "Online — tap to go offline" : "Offline — tap to go online"}
         </button>
       </div>
+      <LocationTracker enabled={online === true} />
       {msg && <p className="mt-2 text-sm text-slate-600">{msg}</p>}
       <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4">
         {[

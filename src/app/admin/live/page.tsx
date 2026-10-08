@@ -3,6 +3,7 @@ import { auth } from "@/lib/auth";
 import { redirect } from "next/navigation";
 import { db } from "@/lib/db";
 import LiveMap from "./LiveMap";
+import LiveRefresher from "./LiveRefresher";
 
 export default function AdminLivePage() {
   return (
@@ -27,6 +28,7 @@ async function AdminLive() {
   return (
     <main className="flex-1 bg-slate-50 p-6">
       <h1 className="text-xl font-bold text-slate-900">Live operations</h1>
+      <LiveRefresher />
       <p className="mt-1 text-sm text-slate-500">{onlineRiders.length} riders online · {activeRides.length} active rides</p>
       <div className="mt-4">
         <LiveMap riders={onlineRiders.map((r) => ({ lat: r.currentLat!, lng: r.currentLng!, name: r.user.name }))} />
