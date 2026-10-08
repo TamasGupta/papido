@@ -24,20 +24,80 @@ export default function LoginPage() {
   }
 
   return (
-    <main className="flex flex-1 items-center justify-center bg-slate-50 p-6">
-      <form onSubmit={onSubmit} className="w-full max-w-sm rounded-xl border border-slate-200 bg-white p-8">
-        <h1 className="text-2xl font-bold text-slate-900">Sign in</h1>
-        <p className="mt-1 text-sm text-slate-500">Welcome back to Papido.</p>
-        <input className="mt-6 w-full rounded-lg border border-slate-300 px-3 py-2" placeholder="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        <input className="mt-3 w-full rounded-lg border border-slate-300 px-3 py-2" placeholder="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-        {error && <p className="mt-3 text-sm text-red-600">{error}</p>}
-        <button disabled={loading} className="mt-6 w-full rounded-lg bg-green-600 py-2.5 font-semibold text-white disabled:opacity-60">
-          {loading ? "Signing in…" : "Sign in"}
-        </button>
-        <p className="mt-4 text-center text-sm text-slate-500">
-          New here? <Link className="text-green-700" href="/register/passenger">Create a passenger account</Link>
-        </p>
-      </form>
+    <main className="min-h-screen bg-surface flex flex-col items-center justify-center p-4">
+      <div className="w-full max-w-[420px] flex flex-col gap-6">
+        {/* Brand Header */}
+        <div className="flex flex-col items-center text-center gap-2">
+          <div className="w-14 h-14 rounded-2xl bg-primary-container text-surface-bright flex items-center justify-center shadow-md">
+            <span className="material-symbols-outlined text-[32px]">two_wheeler</span>
+          </div>
+          <h1 className="text-[30px] font-bold text-on-surface tracking-tight">papido</h1>
+          <p className="text-[13px] text-secondary">Fast, safe &amp; reliable urban bike transit</p>
+        </div>
+
+        {/* Login Card */}
+        <form onSubmit={onSubmit} className="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline/20 flex flex-col gap-4">
+          <div className="flex flex-col gap-1">
+            <h2 className="text-[18px] font-bold text-on-surface">Sign in</h2>
+            <p className="text-[13px] text-secondary">Enter your credentials to access your account</p>
+          </div>
+
+          <div className="flex flex-col gap-1.5">
+            <label className="text-[11px] font-bold text-on-surface uppercase tracking-wider">Email Address</label>
+            <input
+              className="w-full rounded-lg border border-outline/30 bg-surface px-3.5 py-3 text-[14px] text-on-surface placeholder-outline focus:outline-none focus:border-primary transition-all shadow-inner"
+              placeholder="name@example.com"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+
+          <div className="flex flex-col gap-1.5">
+            <label className="text-[11px] font-bold text-on-surface uppercase tracking-wider">Password</label>
+            <input
+              className="w-full rounded-lg border border-outline/30 bg-surface px-3.5 py-3 text-[14px] text-on-surface placeholder-outline focus:outline-none focus:border-primary transition-all shadow-inner"
+              placeholder="••••••••"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+
+          {error && (
+            <div className="flex items-center gap-2 p-3 rounded-lg bg-error-container text-on-error-container text-[13px] font-medium">
+              <span className="material-symbols-outlined text-[18px]">warning</span>
+              <span>{error}</span>
+            </div>
+          )}
+
+          <button
+            disabled={loading}
+            className="w-full h-12 rounded-lg bg-primary text-white font-semibold text-[16px] active:opacity-90 shadow-sm transition-all disabled:opacity-60 flex items-center justify-center gap-2 mt-2"
+          >
+            <span>{loading ? "Signing in…" : "Sign In"}</span>
+            {!loading && <span className="material-symbols-outlined text-[20px]">arrow_forward</span>}
+          </button>
+        </form>
+
+        {/* Footer links */}
+        <div className="flex flex-col items-center gap-2 text-[13px] text-secondary">
+          <p>
+            Don&apos;t have an account?{" "}
+            <Link className="font-semibold text-on-tertiary-container hover:underline" href="/register/passenger">
+              Register as Passenger
+            </Link>
+          </p>
+          <p>
+            Are you a Captain?{" "}
+            <Link className="font-semibold text-primary hover:underline" href="/register/rider">
+              Register as Rider
+            </Link>
+          </p>
+        </div>
+      </div>
     </main>
   );
 }

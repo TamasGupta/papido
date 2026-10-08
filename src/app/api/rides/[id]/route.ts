@@ -13,7 +13,11 @@ export async function GET(
   const { id } = await params;
   const ride = await db.ride.findUnique({
     where: { id },
-    include: { events: { orderBy: { createdAt: "asc" } } },
+    include: {
+      rider: { include: { user: true, vehicle: true } },
+      passenger: { include: { user: true } },
+      events: { orderBy: { createdAt: "asc" } },
+    },
   });
   if (!ride) return fail("RIDE_NOT_FOUND", "Ride could not be found", 404);
   return ok(ride);
