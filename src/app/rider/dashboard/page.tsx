@@ -111,7 +111,7 @@ export default function RiderDashboard() {
               <span className="text-on-surface font-label-md text-label-md">Peak: ???940 (Sat)</span>
             </div>
             <svg className="w-full h-10 text-on-tertiary-container" preserveAspectRatio="none" viewBox="0 0 100 24">
-              <polyline fill="none" points="0,18 16,14 32,20 48,11 64,8 80,4 96,9 100,7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></polyline>
+              <polyline fill="none" points="0,18 16,14 32,20 48,11 64,8 80,4 96,9 100,7" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5"></polyline>
               <circle className="fill-current text-primary" cx="80" cy="4" r="2.5"></circle>
             </svg>
           </div>
