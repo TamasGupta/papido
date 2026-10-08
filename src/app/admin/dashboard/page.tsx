@@ -40,8 +40,20 @@ async function AdminDashboard() {
       <aside className="hidden w-60 shrink-0 border-r border-slate-200 bg-white p-6 md:block">
         <h2 className="text-lg font-bold text-slate-900">Papido Admin</h2>
         <nav className="mt-6 space-y-1 text-sm text-slate-600">
-          {["Dashboard", "Live Rides", "Rides", "Passengers", "Riders", "Verification", "Payments", "Payouts", "Coupons", "Disputes", "Service Areas", "Fare Settings", "Reports", "Settings"].map((item) => (
-            <p key={item} className="rounded-md px-3 py-2 hover:bg-slate-100 first:bg-green-50 first:text-green-700 first:font-semibold">{item}</p>
+          {[
+            ["Dashboard", "/admin/dashboard"],
+            ["Live Rides", "/admin/live"],
+            ["Rides", "/admin/rides"],
+            ["Passengers", "/admin/passengers"],
+            ["Riders", "/admin/riders"],
+            ["Verification", "/admin/verification"],
+            ["Payments", "/admin/payments"],
+            ["Payouts", "/admin/payouts"],
+            ["Coupons", "/admin/coupons"],
+            ["Disputes", "/admin/disputes"],
+            ["Fare Settings", "/admin/fare"],
+          ].map(([label, href]) => (
+            <a key={label} href={href} className="block rounded-md px-3 py-2 hover:bg-slate-100 first:bg-green-50 first:text-green-700 first:font-semibold">{label}</a>
           ))}
         </nav>
       </aside>
