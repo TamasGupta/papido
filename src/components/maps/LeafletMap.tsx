@@ -16,10 +16,12 @@ export default function LeafletMap({
   center,
   pickup,
   destination,
+  markers,
 }: {
   center: [number, number];
   pickup?: [number, number];
   destination?: [number, number];
+  markers?: { position: [number, number]; label?: string }[];
 }) {
   return (
     <MapContainer center={center} zoom={13} className="h-full w-full">
@@ -37,6 +39,11 @@ export default function LeafletMap({
           <Popup>Destination</Popup>
         </Marker>
       )}
+      {markers?.map((m, i) => (
+        <Marker key={i} position={m.position} icon={icon}>
+          {m.label && <Popup>{m.label}</Popup>}
+        </Marker>
+      ))}
     </MapContainer>
   );
 }

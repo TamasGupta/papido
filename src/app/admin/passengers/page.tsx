@@ -1,4 +1,6 @@
 import { Suspense } from "react";
+import { auth } from "@/lib/auth";
+import { redirect } from "next/navigation";
 import { db } from "@/lib/db";
 
 export default function AdminPassengersPage() {
@@ -10,6 +12,8 @@ export default function AdminPassengersPage() {
 }
 
 async function AdminPassengers() {
+  const session = await auth();
+  if (!session?.user || (session.user as any).role !== "SUPER_ADMIN") redirect("/login");
   const passengers = await db.user.findMany({
     where: { role: "PASSENGER" },
     include: { passengerProfile: { include: { rides: true } } },

@@ -1,4 +1,6 @@
 import { Suspense } from "react";
+import { auth } from "@/lib/auth";
+import { redirect } from "next/navigation";
 import { db } from "@/lib/db";
 
 export default function AdminRidesPage() {
@@ -10,6 +12,8 @@ export default function AdminRidesPage() {
 }
 
 async function AdminRides() {
+  const session = await auth();
+  if (!session?.user || (session.user as any).role !== "SUPER_ADMIN") redirect("/login");
   const rides = await db.ride.findMany({
     orderBy: { createdAt: "desc" },
     take: 100,
