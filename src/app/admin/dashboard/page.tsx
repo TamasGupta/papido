@@ -1,4 +1,6 @@
 import { Suspense } from "react";
+import { auth } from "@/lib/auth";
+import { redirect } from "next/navigation";
 import { db } from "@/lib/db";
 
 export default function AdminDashboardPage() {
@@ -10,6 +12,8 @@ export default function AdminDashboardPage() {
 }
 
 async function AdminDashboard() {
+  const session = await auth();
+  if (!session?.user || (session.user as any).role !== "SUPER_ADMIN") redirect("/login");
   const [passengers, riders, pendingVerification, onlineRiders, totalRides, completed, cancelled] =
     await Promise.all([
       db.user.count({ where: { role: "PASSENGER" } }),

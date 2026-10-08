@@ -1,4 +1,6 @@
 import { Suspense } from "react";
+import { auth } from "@/lib/auth";
+import { redirect } from "next/navigation";
 import { db } from "@/lib/db";
 import VerifyActions from "./VerifyActions";
 
@@ -11,6 +13,8 @@ export default function AdminVerificationPage() {
 }
 
 async function AdminVerification() {
+  const session = await auth();
+  if (!session?.user || (session.user as any).role !== "SUPER_ADMIN") redirect("/login");
   const riders = await db.riderProfile.findMany({
     where: { status: { in: ["PENDING", "UNDER_REVIEW"] } },
     include: { user: true, vehicle: true },
