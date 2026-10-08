@@ -201,6 +201,7 @@ model Payment {
   amount    Float
   status    PaymentStatus @default(PENDING)
   method    PaymentMethod
+  ref       String?
   createdAt DateTime      @default(now())
 }
 
@@ -320,6 +321,18 @@ model Dispute {
   category    String
   description String
   status      String   @default("OPEN")
+  createdAt   DateTime @default(now())
+}
+
+model Coupon {
+  id          String   @id @default(cuid())
+  code        String   @unique
+  discountType String  @default("FLAT") // FLAT | PERCENT
+  value       Float
+  maxDiscount Float?
+  minAmount   Float    @default(0)
+  active      Boolean  @default(true)
+  validUntil  DateTime?
   createdAt   DateTime @default(now())
 }
 

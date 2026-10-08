@@ -14,6 +14,7 @@ const createSchema = z.object({
   rideType: z.string().default("BIKE"),
   paymentMethod: z.enum(["UPI", "CARD", "WALLET", "CASH"]).default("CASH"),
   durationMin: z.number().default(20),
+  couponCode: z.string().optional(),
 });
 
 export async function POST(req: Request) {
@@ -33,7 +34,21 @@ export async function POST(req: Request) {
   const fareConfig = (await db.fareConfig.findFirst()) ?? {
     baseFare: 30, perKm: 8, perMinute: 2, minFare: 40, platformFee: 5, surgeMultiplier: 1,
   };
-  const fare = estimateFare(km, d.durationMin, { ...fareConfig, discount: 0 });
+  let discount = 0;
+  if (d.couponCode) {
+    const coupon = await db.coupon.findUnique({ where: { code: d.couponCode } });
+    if (coupon && coupon.active && (!coupon.validUntil || coupon.validUntil > new Date())) {
+      const subtotal =
+        fareConfig.baseFare + km * fareConfig.perKm + d.durationMin * fareConfig.perMinute + fareConfig.platformFee;
+      if (subtotal >= coupon.minAmount) {
+        discount =
+          coupon.discountType === "PERCENT"
+            ? Math.min((subtotal * coupon.value) / 100, coupon.maxDiscount ?? Infinity)
+            : coupon.value;
+      }
+    }
+  }
+  const fare = estimateFare(km, d.durationMin, { ...fareConfig, discount });
   const ride = await db.ride.create({
     data: {
       passengerId: passenger.id,

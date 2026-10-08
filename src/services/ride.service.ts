@@ -40,5 +40,32 @@ export async function transition(
   await db.rideEvent.create({
     data: { rideId, type: `status:${to}`, meta: meta as any },
   });
+
+  // In-app notifications for both parties on meaningful changes
+  const passenger = await db.passengerProfile.findUnique({
+    where: { id: ride.passengerId },
+  });
+  const rider = ride.riderId
+    ? await db.riderProfile.findUnique({ where: { id: ride.riderId } })
+    : null;
+  const messages: Record<string, [string, string]> = {
+    RIDER_ASSIGNED: [passenger ? "Rider assigned" : "", "A rider is on the way to your pickup."],
+    RIDER_ARRIVED: ["", "Your rider has arrived at the pickup point."],
+    RIDE_STARTED: ["", "Your ride has started. Enjoy!"],
+    RIDE_COMPLETED: ["", "Ride completed. Please review your fare."],
+    CANCELLED_BY_RIDER: ["", "Your rider cancelled. We're finding another."],
+    NO_RIDER_FOUND: ["", "No riders nearby right now. Try again shortly."],
+  };
+  const m = messages[to];
+  if (m && passenger) {
+    await db.notification.create({
+      data: { userId: passenger.userId, title: m[0], body: m[1] },
+    });
+  }
+  if (rider && to === "RIDER_ASSIGNED") {
+    await db.notification.create({
+      data: { userId: rider.userId, title: "New ride", body: "Head to the passenger pickup." },
+    });
+  }
   return updated;
 }
