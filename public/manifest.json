@@ -1,0 +1,9 @@
+{
+  "name": "Papido",
+  "short_name": "Papido",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8FAFC",
+  "theme_color": "#16A34A",
+  "icons": []
+}

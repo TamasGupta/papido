@@ -28,11 +28,11 @@ export default function PassengerHome() {
     });
     const data = await res.json();
     setLoading(false);
-    setFareMsg(
-      data.success
-        ? `Ride requested · Estimated fare ₹${data.data.estimatedFare} · PIN ${data.data.pin}`
-        : data.error?.message ?? "Could not book"
-    );
+    if (data.success) {
+      window.location.href = `/passenger/ride/${data.data.id}`;
+    } else {
+      setFareMsg(data.error?.message ?? "Could not book");
+    }
   }
 
   return (
