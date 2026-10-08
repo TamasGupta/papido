@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-container": "#d6e0f4", "surface-container-high": "#dce9ff", "surface-container-highest": "#d3e4fe", "inverse-primary": "#c0c6db", "on-error-container": "#93000a", "on-tertiary": "#ffffff", "outline-variant": "#c6c6cd", "inverse-surface": "#213145", "surface-variant": "#d3e4fe", "secondary": "#555f70", "on-primary-fixed-variant": "#404758", "on-tertiary-fixed": "#002109", "surface-dim": "#cbdbf5", "outline": "#76777d", "on-surface": "#0b1c30", "surface-container-low": "#eff4ff", "secondary-fixed-dim": "#bdc7db", "primary-fixed": "#dce2f7", "on-surface-variant": "#45464c", "background": "#f8f9ff", "surface-tint": "#575e70", "tertiary": "#000000", "tertiary-fixed-dim": "#62df7d", "on-error": "#ffffff", "on-tertiary-container": "#009842", "on-primary-container": "#7d8497", "on-primary-fixed": "#141b2b", "primary-fixed-dim": "#c0c6db", "on-secondary-container": "#596374", "secondary-fixed": "#d9e3f7", "primary-container": "#141b2b", "tertiary-fixed": "#7ffc97", "on-secondary-fixed": "#121c2a", "surface-bright": "#f8f9ff", "on-primary": "#ffffff", "error-container": "#ffdad6", "on-background": "#0b1c30", "tertiary-container": "#002109", "surface": "#f8f9ff", "surface-container": "#e5eeff", "inverse-on-surface": "#eaf1ff", "surface-container-lowest": "#ffffff", "primary": "#000000", "on-secondary-fixed-variant": "#3d4757", "on-tertiary-fixed-variant": "#005320", "on-secondary": "#ffffff", "error": "#ba1a1a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "1.5rem", "gutter": "0.75rem", "space-sm": "0.5rem", "space-md": "0.75rem", "margin": "1rem", "space-lg": "1rem", "space-xs": "0.25rem" }, "fontFamily": { "body-lg": ["Inter"], "body-sm": ["Inter"], "body-md": ["Inter"], "headline-sm": ["Inter"], "display": ["Inter"], "subheading": ["Inter"], "headline-lg": ["Inter"], "headline-md": ["Inter"], "label-sm": ["Inter"], "code-otp": ["Inter"], "label-md": ["Inter"] }, "fontSize": { "body-lg": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "subheading": ["16px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-lg": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "code-otp": ["24px", { "lineHeight": "28px", "letterSpacing": "0.15em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }] } } } }</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-primary-container border-r border-outline/20 z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="px-space-lg py-space-lg border-b border-outline/20 flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="w-9 h-9 rounded bg-surface-container-lowest flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[22px]">two_wheeler</span></div><div><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-surface-container-lowest tracking-tight">PAPIDO</span><span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm uppercase">Ops</span></div><div class="font-label-sm text-label-sm text-on-primary-container tracking-wider uppercase">Ops Command BLR</div></div></div></div><div class="px-space-md py-space-sm border-b border-outline/20 bg-primary-container"><button class="w-full flex items-center justify-between px-space-md py-space-sm rounded bg-inverse-surface border border-outline/30 text-surface-container-lowest hover:bg-inverse-surface/80 transition-colors" type="button"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[16px] text-surface-container-lowest">location_city</span><div class="text-left"><div class="font-label-xs text-on-primary-container font-label-sm text-label-sm">Active Jurisdiction</div><div class="font-subheading text-body-sm text-surface-container-lowest truncate max-w-[140px]">BLR South & East</div></div></div><span class="material-symbols-outlined text-[18px] text-on-primary-container">unfold_more</span></button></div><div class="px-space-md py-space-sm border-b border-outline/20"><div class="flex items-center justify-between px-space-sm py-1"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-on-tertiary-container animate-pulse"></span><span class="font-label-sm text-label-sm text-surface-container-lowest font-medium">Live Telemetry</span></div><span class="font-label-sm text-label-sm text-on-primary-container">99.98% SLA</span></div></div><div class="px-space-md pt-space-md"><div class="px-space-sm pb-space-xs font-label-sm text-label-sm text-on-primary-container uppercase tracking-wider">Operational Modules</div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-inverse-surface text-surface-container-lowest border-l-2 border-surface-container-lowest font-subheading"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded text-on-primary-container hover:bg-inverse-surface hover:text-surface-container-lowest transition-all group" data-path="live-operations-dispatch" href="#"><span class="material-symbols-outlined text-[20px] text-on-primary-container group-hover:text-surface-container-lowest transition-colors">radar</span><span class="font-body-md text-body-md">Live Ops & Dispatch</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm rounded transition-all group bg-inverse-surface text-surface-container-lowest border-l-2 border-surface-container-lowest font-subheading" data-path="fleet-rider-partners" href="#"><span class="material-symbols-outlined text-[20px] text-on-primary-container group-hover:text-surface-container-lowest transition-colors">badge</span><span class="font-body-md text-body-md">Fleet & Rider Partners</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded text-on-primary-container hover:bg-inverse-surface hover:text-surface-container-lowest transition-all group" data-path="trips-live-rides" href="#"><span class="material-symbols-outlined text-[20px] text-on-primary-container group-hover:text-surface-container-lowest transition-colors">route</span><span class="font-body-md text-body-md">Trips & Live Rides</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded text-on-primary-container hover:bg-inverse-surface hover:text-surface-container-lowest transition-all group" data-path="surge-pricing-engine" href="#"><span class="material-symbols-outlined text-[20px] text-on-primary-container group-hover:text-surface-container-lowest transition-colors">trending_up</span><span class="font-body-md text-body-md">Surge & Pricing Engine</span></a></nav></div></div><div class="p-space-md border-t border-outline/20"><div class="flex items-center justify-between p-space-sm rounded bg-inverse-surface border border-outline/30"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded bg-surface-container-lowest flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[18px]">admin_panel_settings</span></div><div class="text-left"><div class="font-body-sm text-body-sm text-surface-container-lowest font-medium leading-none">Ops Director</div><div class="font-label-sm text-label-sm text-on-primary-container mt-0.5">bengaluru-hq@papido.in</div></div></div><button class="text-on-primary-container hover:text-surface-container-lowest transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">logout</span></button></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest border-b border-outline/20 z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg flex-1"><div class="relative w-full max-w-md"><span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full pl-9 pr-space-md py-1.5 bg-surface border border-outline/30 rounded font-body-sm text-body-sm text-on-surface placeholder-outline focus:outline-none focus:border-primary transition-all" placeholder="Search Rider ID, Trip ID, KA-01-XX-0000..." type="text"/></div><div class="hidden xl:flex items-center gap-space-sm"><div class="flex items-center gap-space-xs px-2.5 py-1 rounded bg-error-container/30 border border-error/40 text-on-error-container font-label-md text-label-md"><span class="material-symbols-outlined text-error text-[16px]">fmd_bad</span><span class="font-medium">2 Active SOS</span></div><div class="flex items-center gap-space-xs px-2.5 py-1 rounded bg-surface-container-low border border-outline/30 text-secondary font-label-md text-label-md"><span class="material-symbols-outlined text-secondary text-[16px]">pending_actions</span><span class="font-medium">42 KYC Pending</span></div></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex flex-col text-right pr-space-md border-r border-outline/20"><div class="font-label-sm text-label-sm text-on-surface font-semibold">14:24:08 IST</div><div class="font-label-sm text-label-sm text-on-surface-variant">08:54:08 UTC</div></div><div class="flex items-center gap-space-xs"><button class="w-9 h-9 rounded border border-outline/30 flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><button class="w-9 h-9 rounded border border-outline/30 flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">refresh</span></button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- Sub-header & Action Bar -->
+<div class="w-full bg-surface-container-lowest px-space-xl py-space-lg shadow-sm">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm uppercase tracking-wider">Fleet Registry BLR-KA</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">• Updated 42 seconds ago</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-0.5">Fleet & Rider Directory</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Manage 4,280 registered captains, document verification queue, and EV transition programs across Bengaluru Metro.</p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="h-10 px-space-md rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container-low transition-colors flex items-center gap-space-xs shadow-sm font-subheading text-body-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Export CSV Roster</span>
+</button>
+<button class="h-10 px-space-md rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container-low transition-colors flex items-center gap-space-xs shadow-sm font-subheading text-body-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container">forum</span>
+<span>Bulk WhatsApp Broadcast</span>
+</button>
+<button class="h-10 px-space-lg rounded bg-primary text-on-primary hover:bg-inverse-surface transition-colors flex items-center gap-space-xs shadow-sm font-subheading text-body-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span>+ Manually Onboard Captain</span>
+</button>
+</div>
+</div>
+<!-- Quick Stat Pills Bar -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md mt-space-lg pt-space-md bg-surface-container-low/60 p-space-sm rounded">
+<div class="flex items-center gap-space-md px-space-md py-space-sm bg-surface-container-lowest rounded shadow-sm">
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[20px]">sports_motorsports</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Total Active Captains</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold flex items-center gap-1">
+            3,892
+            <span class="font-label-sm text-label-sm text-on-tertiary-container font-medium">+14 today</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md px-space-md py-space-sm bg-surface-container-lowest rounded shadow-sm">
+<div class="w-10 h-10 rounded bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">assignment_late</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-error-container uppercase tracking-wider font-semibold">Pending KYC Review</div>
+<div class="font-headline-sm text-headline-sm text-error font-semibold flex items-center gap-1">
+            42 urgent
+            <span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md px-space-md py-space-sm bg-surface-container-lowest rounded shadow-sm">
+<div class="w-10 h-10 rounded bg-surface-container text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">block</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Suspended / Inactive</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold">64</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md px-space-md py-space-sm bg-surface-container-lowest rounded shadow-sm">
+<div class="w-10 h-10 rounded bg-surface-container-high text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">electric_scooter</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">EV Fleet Ratio</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold flex items-center gap-1">
+            28.4%
+            <span class="font-label-sm text-label-sm text-on-tertiary-container font-medium">1,215 EV bikes</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Priority Verification Queue -->
+<div class="px-space-xl pt-space-lg">
+<div class="bg-surface-container-lowest p-space-lg rounded shadow-sm">
+<div class="flex items-center justify-between mb-space-md pb-space-sm bg-surface-container-low/50 p-space-sm rounded">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">verified_user</span>
+<div>
+<h2 class="font-subheading text-subheading text-on-surface">KYC Document Verification Queue</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Instant compliance desk • Mandated turnaround SLA: 15 minutes per batch</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-md text-label-md">3 Priority Overdue</span>
+<a class="font-label-md text-label-md text-on-surface underline hover:text-on-surface-variant" href="#">Open Full Queue (42)</a>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Applicant 1: Venkatesh Rao -->
+<div class="bg-surface p-space-md rounded flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<img class="w-11 h-11 rounded object-cover shadow-sm" data-alt="Close up passport portrait photograph of Venkatesh Rao, an Indian male applicant in his 30s with neutral expressions wearing white collared polo against simple indoor studio background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1eASMKHktIUYbkIDEdXA52IKcazyxNQ-cG06Ydv-n9rVzt9zSJbRPcV9pwTDvP0mL78_auaPcj9Izq_pRk-6tfbUD1HsdLKv8dAWeCPKrIB3e7Q7StbHJP_571ai_1D3qhvESD_7o0GAcnEKWfaBMlyUjM7EjaLzqkWFbT1N-W5sPKM8-q8ySJyVfyEn9sw8inUWOjO4PeDh7If9hcWpzJ9CoWUYvhC7fM-dAeypW"/>
+<div>
+<div class="font-subheading text-body-md text-on-surface">Venkatesh Rao</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">+91 98452 11902 • BLR-Central</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-label-sm text-label-sm text-on-surface font-semibold">DL-EXP: 2031</span>
+</div>
+<div class="mt-space-sm bg-surface-container-lowest p-space-sm rounded shadow-sm">
+<div class="flex items-center justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface-variant">Vehicle</span>
+<span class="font-subheading text-on-surface">Hero Splendor Plus (Petrol)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold">KA 01 MJ 1290</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">RC Verified</span>
+</div>
+</div>
+<!-- DL Front/Back Previews -->
+<div class="mt-space-sm grid grid-cols-2 gap-space-xs">
+<div class="p-1.5 rounded bg-surface-container-lowest shadow-sm flex flex-col gap-1">
+<div class="font-label-sm text-label-sm text-on-surface-variant truncate">DL Front side</div>
+<img class="w-full h-16 rounded object-cover" data-alt="Detailed macro photo preview of Indian Karnataka State Driving License smart card front face with high definition hologram, seal and driver particulars in crisp daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwIc3xvRwuRYxIlCU0k9oLIyHy89y3p84zhADJzHLOql3r5aU8usr6kDV0sgg0MM8y_BKwYAJ-0VfluhWbiIML7ecWakt6i5UtU2psY4SG6LvMoKEp8oY8YJHvIYVOkkWB1LOhcXrFOZI1b5Ixkhi3EdcCy5Xt_Sj1Li11tXkeMHAQhlJNXykZY3oUQHmAZR4pqtdPDVSFm3KI08UW1PqrnYmwPV3szOFA_LSCvDll"/>
+</div>
+<div class="p-1.5 rounded bg-surface-container-lowest shadow-sm flex flex-col gap-1">
+<div class="font-label-sm text-label-sm text-on-surface-variant truncate">DL Back side</div>
+<img class="w-full h-16 rounded object-cover" data-alt="Macro scan preview of the reverse side of Indian Transport Driving License showing chip contacts, vehicle endorsement classes MCWG and validity timestamps." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0WKsKQ7lOr_6BkU4Cv4e3WDLPhqstvyf5bK-Xi-WBh7_6z3YOOI2dHbBbLuGKZrZFwq0xMESfXZ8ZYBLKkoPDoG64oLN_eUqZrcesdtOvUEFRCpVmjOINIOV5p5MExY3BgWEeRQ1R8lIjgWbNosPsbJG2JXQhlGsCbjQwX0LoBjQ4hORTA7Ggtq3Aut2nvppwvSWlRiEmTSt5ZVD0tbQGG03t0YCfx02CWD4Tfa3H"/>
+</div>
+</div>
+<div class="mt-space-sm flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1 text-on-error-container">
+<span class="material-symbols-outlined text-[15px] text-error">warning</span> Police BGV Pending
+              </span>
+<span class="text-on-surface-variant">Waiting 8 mins</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center gap-space-xs">
+<button class="flex-1 h-9 rounded bg-primary text-on-primary font-subheading text-body-sm hover:bg-inverse-surface transition-colors flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+              Approve
+            </button>
+<button class="px-space-md h-9 rounded bg-surface-container text-on-surface font-subheading text-body-sm hover:bg-error-container hover:text-on-error-container transition-colors" type="button">
+              Reject
+            </button>
+</div>
+</div>
+<!-- Applicant 2: Naveen Gowda -->
+<div class="bg-surface p-space-md rounded flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<img class="w-11 h-11 rounded object-cover shadow-sm" data-alt="Passport size driver license photo of young South Indian male applicant Naveen Gowda wearing yellow collar shirt with clean groomed haircut and focused smile." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcP70T4Mq5YG0J9z0Q6m7GU-NInISpJ3FPpK8UewUj6x1gzg07ynCwM0287GUOSAW8r3tJhqlR-VrjvWvGN7vw3ex34TH1OzHXcs0wj820VRmghndq_SO5u10Pj7OBVoUehRUzlTI1DsBLkZRpUyrlaUNazm9QhrLwfg8i7JtcG3MQdLJrfnjd-N90So5QZcOZWgRW31PIKxPPn5RAGElBHc88W049ZS_MKGbsU13-"/>
+<div>
+<div class="font-subheading text-body-md text-on-surface">Naveen Gowda</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">+91 97401 88319 • BLR-South</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-label-sm text-label-sm text-on-surface font-semibold">EV-COMM</span>
+</div>
+<div class="mt-space-sm bg-surface-container-lowest p-space-sm rounded shadow-sm">
+<div class="flex items-center justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface-variant">Vehicle</span>
+<span class="font-subheading text-on-surface">Ather 450X Gen 3 (EV)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold">KA 05 ER 5521</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">Battery Certified</span>
+</div>
+</div>
+<div class="mt-space-sm grid grid-cols-2 gap-space-xs">
+<div class="p-1.5 rounded bg-surface-container-lowest shadow-sm flex flex-col gap-1">
+<div class="font-label-sm text-label-sm text-on-surface-variant truncate">Commercial Insurance</div>
+<img class="w-full h-16 rounded object-cover" data-alt="High quality scanned document snippet of two wheeler commercial insurance certificate policy document issued by United India Insurance company." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4-33hHKIpB9OCG7OcMxIgZwLkC67Dv4m3qALTKcYzIv-Y0fHGRDfsHzm1a05w_-NS3pvrSTkSVVUwoTBuh7URXXbNUYwFIUggxSIhMNgZ3YHMFnTKyISQvsfuIxHyuCo3sT9GyRsRemhELu2lhkIsdb7ZogQ0HLsujmJDiyCebC1Mj7kjzNcvP8VXPMCeQC7ClPNfBswpOJFWbnXY1BL5vFoDgEUTftzBzOMJbBPj"/>
+</div>
+<div class="p-1.5 rounded bg-surface-container-lowest shadow-sm flex flex-col gap-1">
+<div class="font-label-sm text-label-sm text-on-surface-variant truncate">Aadhaar e-KYC</div>
+<img class="w-full h-16 rounded object-cover" data-alt="Official UIDAI e-Aadhaar card letter format visual snippet with government emblem and QR code preview." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNn0cofbspkCos4H-MmszZNCX4k9HOUX4rtX80gaOybs8XSf0F9rf4Q--7GDlXWfQCREeKz7X1wjrmjiHqD41LeSnHPe2t7fu6txymIJebrDRJ3SCTlDPh-1FNvcwo85mO5Jv1HJMG-QTaxFfLz6vvCSE8h7tzSnrDeEBhFUerGBZ3BhDqD49SKBPEI5C1PccnNulYH8TFK6qzsE5yKeP7z8LftUFADFRCgq5J30xJ"/>
+</div>
+</div>
+<div class="mt-space-sm flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1 text-on-tertiary-container font-medium">
+<span class="material-symbols-outlined text-[15px]">verified</span> 4/4 Docs Validated
+              </span>
+<span class="text-on-surface-variant">Waiting 11 mins</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center gap-space-xs">
+<button class="flex-1 h-9 rounded bg-primary text-on-primary font-subheading text-body-sm hover:bg-inverse-surface transition-colors flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+              Approve
+            </button>
+<button class="px-space-md h-9 rounded bg-surface-container text-on-surface font-subheading text-body-sm hover:bg-error-container hover:text-on-error-container transition-colors" type="button">
+              Reject
+            </button>
+</div>
+</div>
+<!-- Applicant 3: Syed Imran -->
+<div class="bg-surface p-space-md rounded flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<img class="w-11 h-11 rounded object-cover shadow-sm" data-alt="Headshot of Syed Imran, a professional commercial delivery and bike taxi driver in Bangalore wearing black polo shirt against neutral gray studio backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVjRr-khRjLAz5WH1WVn9G6umIwbRJQi2fjNUBhr6krv1trEODJCb1VGcavS1ts5QtnTKOMUshTLViehiOwzC0jFm2JO9I7KR2_7Ksq6RPtIrzp4ai-kfW0TAfMjPjx1KvseQ9U3hOX9kgFXpqQ4UztQLGGnrgFCnhl7xW_wH6wl-egm9zWrV2PzhE2xAq9e12vFXVkhG_1HS-gy912jUMhuOjn5pH2_yVqv5IJCKp"/>
+<div>
+<div class="font-subheading text-body-md text-on-surface">Syed Imran</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">+91 99163 44021 • BLR-East</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">RE-UPLOAD REQ</span>
+</div>
+<div class="mt-space-sm bg-surface-container-lowest p-space-sm rounded shadow-sm">
+<div class="flex items-center justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface-variant">Vehicle</span>
+<span class="font-subheading text-on-surface">Bajaj Pulsar 150 (Petrol)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold">KA 03 HM 9081</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">RC Exp 2026</span>
+</div>
+</div>
+<div class="mt-space-sm grid grid-cols-2 gap-space-xs">
+<div class="p-1.5 rounded bg-surface-container-lowest shadow-sm flex flex-col gap-1">
+<div class="font-label-sm text-label-sm text-on-surface-variant truncate">Helmet Selfie</div>
+<img class="w-full h-16 rounded object-cover" data-alt="Selfie photograph of a motorcycle delivery partner wearing a certified ISI helmet with visor open and bright reflective safety jacket." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyqzKF_wimvSNANoCBhnledQPhIwDpHKzKFFEkwMms08cgVPf-80KW-CYzGfSHtoKuKmJUKCHV03SWARyslFjEoO_Qcw-bBpIchSsv_BrCyh7M8x4c5Azu6EUrxhqboXFPCrTG79ikwOjNCeGlrPMIhzrL50rRx3bxz45FOt7tNNjCwxSqXLEJkuN-72Efx8OZcwoUaYNW-xmk-oi3Bsekyki5elPgFLnZVWXvIeHC"/>
+</div>
+<div class="p-1.5 rounded bg-surface-container-lowest shadow-sm flex flex-col gap-1">
+<div class="font-label-sm text-label-sm text-error truncate font-medium">Blurry RC Scan</div>
+<div class="w-full h-16 rounded bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-error">blur_on</span>
+</div>
+</div>
+</div>
+<div class="mt-space-sm flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1 text-error font-medium">
+<span class="material-symbols-outlined text-[15px]">priority_high</span> RC Plate illegible
+              </span>
+<span class="text-on-surface-variant">Waiting 19 mins</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center gap-space-xs">
+<button class="flex-1 h-9 rounded bg-surface-container text-on-surface font-subheading text-body-sm hover:bg-surface-container-high transition-colors flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">sms</span>
+              Request Re-Upload
+            </button>
+<button class="px-space-md h-9 rounded bg-error-container text-on-error-container font-subheading text-body-sm hover:bg-error hover:text-on-error transition-colors" type="button">
+              Reject
+            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Search & Filter Controls -->
+<div class="px-space-xl pt-space-lg">
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-space-md">
+<!-- Search Input -->
+<div class="relative flex-1 min-w-[320px]">
+<span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span>
+<input class="w-full pl-10 pr-space-md py-2 bg-surface rounded font-body-sm text-body-sm text-on-surface placeholder-outline focus:outline-none focus:bg-surface-container-lowest transition-all shadow-inner" placeholder="Search Captain Name, Mobile, KA-xx Reg No, DL-No..." type="text" value="Rajesh Kumar"/>
+</div>
+<!-- Filters Row -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="flex items-center gap-1 bg-surface px-space-md py-1.5 rounded shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Status:</span>
+<select class="bg-transparent font-subheading text-body-sm text-on-surface focus:outline-none cursor-pointer">
+<option>All Statuses</option>
+<option selected="">Approved (Active)</option>
+<option>Pending Review</option>
+<option>Flagged / Suspended</option>
+</select>
+</div>
+<div class="flex items-center gap-1 bg-surface px-space-md py-1.5 rounded shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Vehicle:</span>
+<select class="bg-transparent font-subheading text-body-sm text-on-surface focus:outline-none cursor-pointer">
+<option selected="">All Vehicles</option>
+<option>Regular Petrol (100-125cc)</option>
+<option>Premium (150cc+)</option>
+<option>EV Electric Bike</option>
+</select>
+</div>
+<div class="flex items-center gap-1 bg-surface px-space-md py-1.5 rounded shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Zone:</span>
+<select class="bg-transparent font-subheading text-body-sm text-on-surface focus:outline-none cursor-pointer">
+<option>All Bengaluru Zones</option>
+<option selected="">BLR South (Koramangala/HSR)</option>
+<option>BLR East (Indiranagar/Whitefield)</option>
+<option>BLR North (Hebbal/Yelahanka)</option>
+<option>BLR Central (MG Road/Shivajinagar)</option>
+</select>
+</div>
+<button class="h-9 px-space-md rounded bg-surface text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors flex items-center gap-1 font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+          Reset Filters
+        </button>
+</div>
+</div>
+</div>
+<!-- Main Split Layout: Captains Table + Live Dossier Preview Drawer -->
+<div class="px-space-xl py-space-lg">
+<div class="flex flex-col 2xl:flex-row items-start gap-space-lg">
+<!-- Left Column: Master Captain Table -->
+<div class="flex-1 w-full bg-surface-container-lowest rounded shadow-sm overflow-hidden">
+<div class="px-space-lg py-space-md bg-surface-container-low/40 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-subheading text-subheading text-on-surface">Rider Directory & Compliance Master</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">Displaying 1 - 25 of 4,280</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="w-8 h-8 rounded bg-surface flex items-center justify-center text-on-surface-variant hover:text-on-surface shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+</button>
+<span class="font-label-sm text-label-sm text-on-surface px-1">Page 1 of 172</span>
+<button class="w-8 h-8 rounded bg-surface flex items-center justify-center text-on-surface-variant hover:text-on-surface shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-md px-space-lg font-semibold">Captain Profile</th>
+<th class="py-space-md px-space-md font-semibold">Vehicle & Reg Plate</th>
+<th class="py-space-md px-space-md font-semibold">Jurisdiction / Hub</th>
+<th class="py-space-md px-space-md font-semibold">Compliance & KYC</th>
+<th class="py-space-md px-space-md font-semibold">Trip Stats</th>
+<th class="py-space-md px-space-md font-semibold">Ledger & Payout</th>
+<th class="py-space-md px-space-md font-semibold">Telemetry</th>
+<th class="py-space-md px-space-md text-right font-semibold">Actions</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm text-on-surface">
+<!-- ROW 1: ACTIVE SELECTED (Rajesh Kumar) -->
+<tr class="bg-surface-container-low/70 hover:bg-surface-container-low transition-colors cursor-pointer group">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="relative">
+<img class="w-10 h-10 rounded object-cover shadow-sm" data-alt="Portrait photo of Rajesh Kumar, a dependable middle-aged Indian bike captain wearing a clean black polo shirt and ID lanyard in a commercial setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNaqLq49qF4Weflbz4vJTgQO3wGUNZXWiSWd7DQ1CsF51yD3ncAKl3qbcJFweqG4rewCSEdB7NjPHC-VyUu7IUwss-DhopRtnegLz6yyx-jTY81pvuV8jmePWxRr08G9tKI8GDF-6V5E6bORNIyR64jRUB0lNRvZ_MT8g3bBFvKVgqROlhmKmPWPU7iR_uVDa9qm9T1ngK0k6HynF5Cc5BiBVNhZpPiCQ97cbTI-5S"/>
+<span class="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-on-tertiary-container ring-2 ring-surface-container-lowest"></span>
+</div>
+<div>
+<div class="font-subheading text-body-md text-on-surface font-semibold flex items-center gap-1.5">
+                        Rajesh Kumar
+                        <span class="px-1.5 py-0.2 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface font-bold">TOP CAPTAIN</span>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="font-medium text-on-surface">#CPT-8821</span> • Joined Feb 2022
+                      </div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-subheading text-body-sm text-on-surface">Hero Splendor Plus</div>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-md text-label-md font-bold tracking-wider">KA 01 EK 8842</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Petrol</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-subheading text-body-sm text-on-surface">Koramangala South</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Station Hub #4 • Sector 5</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="inline-flex items-center gap-1 px-2 py-1 rounded bg-surface-container-highest text-on-tertiary-container font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>100% Verified</span>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-1">DL exp 2029 • RC • BGV Clean</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="font-subheading text-body-sm text-on-surface">1,420 trips</span>
+<span class="flex items-center text-on-surface font-semibold font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span> 4.9
+                    </span>
+</div>
+<div class="font-label-sm text-label-sm text-on-tertiary-container font-medium">98% completion • 0 safety marks</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-subheading text-body-sm text-on-surface font-bold">₹2,140.00</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[13px] text-on-tertiary-container">account_balance</span> Direct ACH Active
+                  </div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-lowest shadow-sm text-on-surface font-label-md text-label-md font-medium">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container animate-pulse"></span>
+                    Online & Ready
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" title="View Dossier" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 2: Anand Prakash (On Ride) -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer group">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="relative">
+<img class="w-10 h-10 rounded object-cover shadow-sm" data-alt="Portrait photography of Anand Prakash, a polite Indian commuter driver in his late 20s, wearing clean dark polo shirt in Bangalore." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSiw2sW0GIk_xDb8ymngWZCiYdxrwF7zY8uSZXiDrabkdvxbXFmankO0mZiO3X30LoTETRitW8yv6jjW7G0TnzkxYcOQ-eXHpy6RMA_GwpXKaTHwYwAaKoYOOSuTWho7JzBdTmvtCs441IB_VQtxkzoSTjItO0n63fROfJe0e1_s-9SCpSg74IzaAwqIWLan5EprtTQfG75ewxLg9O2C8StbigRP5wUNWsCVzNdqxi"/>
+<span class="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-primary ring-2 ring-surface-container-lowest"></span>
+</div>
+<div>
+<div class="font-subheading text-body-md text-on-surface font-semibold">Anand Prakash</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="font-medium text-on-surface">#CPT-9042</span> • Joined Aug 2022
+                      </div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-subheading text-body-sm text-on-surface">Ola S1 Pro (EV)</div>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-md text-label-md font-bold tracking-wider">KA 03 MX 2911</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">EV Green</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-subheading text-body-sm text-on-surface">Indiranagar Metro Hub</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Station Hub #2 • 100ft Road</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="inline-flex items-center gap-1 px-2 py-1 rounded bg-surface-container-highest text-on-tertiary-container font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>100% Verified</span>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-1">DL exp 2030 • Green Pass</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="font-subheading text-body-sm text-on-surface">892 trips</span>
+<span class="flex items-center text-on-surface font-semibold font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span> 4.8
+                    </span>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant font-medium">96% completion • 0 marks</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-subheading text-body-sm text-on-surface font-bold">₹1,480.50</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[13px] text-on-tertiary-container">account_balance</span> UPI ID Linked
+                  </div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-highest text-on-surface font-label-md text-label-md font-medium">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                    On Trip #9182
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 3: Manjunath Swamy (Offline) -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer group">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="relative">
+<img class="w-10 h-10 rounded object-cover shadow-sm opacity-90" data-alt="Portrait photography of Manjunath Swamy, a senior motorcycle captain in Bangalore, India, wearing a jacket over formal checked shirt." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT56dTlWJAni4OuHMbtPYc9Xhn4n3RKtVFAlywJqsKFvzn0EynpGe00ukE_jQNA_DlVar3DQdrhFLaZ7jAGiALGWfdBYc1BSDj3hcNLXvTlZjE8BNoUmg414qXhuyGYuEjEbMou44lxaFCwNGVf2U030z_XMPACQu2b5zUHPj5g_q1VmRXWk2FAm5neLskzHPuqZSf0_hdT_xmgRQkUOWYDCDBfYFdMkXgseS8lvoM"/>
+<span class="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-secondary ring-2 ring-surface-container-lowest"></span>
+</div>
+<div>
+<div class="font-subheading text-body-md text-on-surface font-semibold">Manjunath Swamy</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="font-medium text-on-surface">#CPT-4102</span> • Joined Jan 2021
+                      </div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-subheading text-body-sm text-on-surface">TVS Apache RTR 160</div>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-md text-label-md font-bold tracking-wider">KA 04 JG 6712</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Premium 160cc</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-subheading text-body-sm text-on-surface">Hebbal Outer Ring</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Station Hub #7 • Manyata Gate 2</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="inline-flex items-center gap-1 px-2 py-1 rounded bg-surface-container text-on-surface font-label-md text-label-md font-medium">
+<span class="material-symbols-outlined text-[16px] text-secondary">assignment_turned_in</span>
+<span>Renewal Pending</span>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-1">Insurance exp in 6 days</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="font-subheading text-body-sm text-on-surface">3,120 trips</span>
+<span class="flex items-center text-on-surface font-semibold font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span> 4.95
+                    </span>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant font-medium">99% completion • 0 marks</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-subheading text-body-sm text-on-surface font-bold">₹820.00</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[13px] text-on-tertiary-container">account_balance</span> Direct ACH Active
+                  </div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container text-secondary font-label-md text-label-md font-medium">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                    Offline (4h)
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 4: Karthik Reddy (Suspended) -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer group bg-error-container/10">
+<td class="py-space-md px-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="relative">
+<img class="w-10 h-10 rounded object-cover shadow-sm grayscale" data-alt="Portrait photography of Karthik Reddy, an adult male motorcycle rider with stern neutral expression indoors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASCHJRwaiAzurVI7fAP5rrw8xTjp0WRkY6TQ3ZX46c4HYteP_ASpFU7VC12FnKqK3kaCb9XRt9C5-n2Na4mtDrWD9ybWwRfoS26vIaCbDz6id2mX_9wvIzKmexMWruF4VZfDKtU18ePC7QQHZeT05Oodjzj_rS7E5gIa3yZtp0O_77pIEYjD1XTzMWOY3hJ4dqa0MdD0iShbD2ULHiLXcDGK3F9UXwIh5vpEynKR9D"/>
+<span class="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-error ring-2 ring-surface-container-lowest"></span>
+</div>
+<div>
+<div class="font-subheading text-body-md text-on-surface font-semibold flex items-center gap-1">
+                        Karthik Reddy
+                        <span class="px-1.5 py-0.2 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">HOLD</span>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="font-medium text-on-surface">#CPT-6219</span> • Joined Jun 2023
+                      </div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-subheading text-body-sm text-on-surface">Bajaj CT 110</div>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-md text-label-md font-bold tracking-wider">KA 51 EA 1890</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Petrol</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-subheading text-body-sm text-on-surface">Electronic City Phase 1</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Station Hub #12 • Toll Plaza</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="inline-flex items-center gap-1 px-2 py-1 rounded bg-error-container text-on-error-container font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[16px]">gavel</span>
+<span>Safety Violation</span>
+</div>
+<div class="font-label-sm text-label-sm text-error mt-1 font-medium">Customer Dispute #9812</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="font-subheading text-body-sm text-on-surface">412 trips</span>
+<span class="flex items-center text-on-surface font-semibold font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-error" style="font-variation-settings: 'FILL' 1;">star</span> 4.1
+                    </span>
+</div>
+<div class="font-label-sm text-label-sm text-on-error-container font-medium">81% completion • 2 warnings</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-subheading text-body-sm text-on-surface font-bold text-error">₹340.00 (Frozen)</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-error">
+<span class="material-symbols-outlined text-[13px]">lock</span> Payout Blocked
+                  </div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-error-container text-on-error-container font-label-md text-label-md font-semibold">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+                    Suspended
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer Bulk Actions -->
+<div class="px-space-lg py-space-md bg-surface-container-low/40 flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md font-body-sm text-body-sm text-on-surface-variant">
+<span>Showing 4 highlighted captains of 4,280</span>
+<span class="h-3 w-[1px] bg-outline/20"></span>
+<span class="text-on-tertiary-container font-medium">Active Dispatch Acceptance: 94.2%</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-md text-label-md">
+<button class="px-3 py-1.5 rounded bg-surface text-on-surface hover:bg-surface-container transition-colors shadow-sm font-semibold" type="button">1</button>
+<button class="px-3 py-1.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" type="button">2</button>
+<button class="px-3 py-1.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" type="button">3</button>
+<span class="px-2 text-on-surface-variant">...</span>
+<button class="px-3 py-1.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" type="button">172</button>
+</div>
+</div>
+</div>
+<!-- Right Column: Slide-Over / Selected Captain Compliance Dossier -->
+<div class="w-full 2xl:w-[480px] bg-surface-container-lowest rounded shadow-md overflow-hidden flex flex-col shrink-0">
+<!-- Drawer Header -->
+<div class="px-space-lg py-space-md bg-surface-container-low/70 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">badge</span>
+<h2 class="font-subheading text-subheading text-on-surface">Captain Compliance Dossier</h2>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-bold">#CPT-8821</span>
+<button class="w-7 h-7 rounded hover:bg-surface-container flex items-center justify-center text-on-surface-variant" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<div class="p-space-lg flex flex-col gap-space-lg max-h-[820px] overflow-y-auto">
+<!-- Quick Profile Card -->
+<div class="bg-surface p-space-md rounded flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="relative">
+<img class="w-14 h-14 rounded object-cover shadow-sm" data-alt="Official verification profile photo of Rajesh Kumar with clear facial alignment and white backdrop for transport regulatory credential issuance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQX2dfenUhFGczciZqY_jYemYDNx0Jg-zh628WH4DTcG79-VRgmmKNQFAtLhoh2v3Bw8xH0QHGaZyBoSV1xJrIcdnc-_spNV4iGoTNwB3FGQXT3t62zwiU8Wq8QrfZH7eLy0Zy06TGg4Tdx30pSYwozPDqu4z0bv2NSOGSa7f7vUMq5BgT4W68CVXE7lIdmSn38UC4bDR42tqRij0yvin25rcnqzCGDwQFTpebBwcs"/>
+<span class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-on-tertiary-container ring-2 ring-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-[10px] text-on-tertiary">check</span>
+</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold">Rajesh Kumar</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">+91 98450 49120 • KYC Gold Certified</div>
+<div class="font-label-sm text-label-sm text-on-tertiary-container font-medium mt-0.5">Koramangala South Hub • On-Duty</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold">₹2,140</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Wallet Balance</div>
+</div>
+</div>
+<!-- Document Verification Cards Grid -->
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="font-subheading text-body-sm text-on-surface font-semibold flex items-center gap-1">
+<span>Verified Legal Credentials</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(5 of 5 Approved)</span>
+</div>
+<button class="font-label-sm text-label-sm text-on-surface underline hover:text-on-surface-variant" type="button">Audit History</button>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Document 1: Aadhaar Card (Masked) -->
+<div class="bg-surface p-space-md rounded shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container">fingerprint</span>
+<div>
+<div class="font-subheading text-body-sm text-on-surface">Aadhaar Card (UIDAI Masked)</div>
+<div class="font-code-otp text-label-md text-on-surface-variant tracking-wider">XXXX-XXXX-4982</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-tertiary-container font-label-sm text-label-sm font-semibold">VALIDATED</span>
+</div>
+<div class="mt-2 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>UIDAI XML Signature Verified</span>
+<a class="text-on-surface font-medium underline" href="#">Preview Scan</a>
+</div>
+</div>
+<!-- Document 2: Transport Driving License -->
+<div class="bg-surface p-space-md rounded shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container">badge</span>
+<div>
+<div class="font-subheading text-body-sm text-on-surface">Driving License (Commercial/Transport)</div>
+<div class="font-subheading text-body-sm text-on-surface">KA-01-2015-0094182</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-tertiary-container font-label-sm text-label-sm font-semibold">VALIDATED</span>
+</div>
+<div class="mt-2 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Valid through 14 Aug 2029 (MCWG / LMV-TR)</span>
+<a class="text-on-surface font-medium underline" href="#">Preview DL</a>
+</div>
+</div>
+<!-- Document 3: Vehicle RC Book -->
+<div class="bg-surface p-space-md rounded shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container">description</span>
+<div>
+<div class="font-subheading text-body-sm text-on-surface">Vehicle Registration Certificate (RC)</div>
+<div class="flex items-center gap-1 font-label-md text-label-md text-on-surface font-bold">
+<span class="px-1.5 py-0.2 rounded bg-surface-container-highest text-on-surface">KA 01 EK 8842</span>
+</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-tertiary-container font-label-sm text-label-sm font-semibold">VALIDATED</span>
+</div>
+<div class="mt-2 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Parivahan VAHAN Match: 100% Owner Align</span>
+<a class="text-on-surface font-medium underline" href="#">Inspect RC</a>
+</div>
+</div>
+<!-- Document 4: Commercial Insurance -->
+<div class="bg-surface p-space-md rounded shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container">security</span>
+<div>
+<div class="font-subheading text-body-sm text-on-surface">Commercial Two-Wheeler Insurance</div>
+<div class="font-label-md text-label-md text-on-surface">Bajaj Allianz • Pol #BA-881290</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-tertiary-container font-label-sm text-label-sm font-semibold">ACTIVE</span>
+</div>
+<div class="mt-2 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Comprehensive Passenger Rider Covered</span>
+<span class="text-on-surface font-medium font-label-sm text-label-sm">Exp: Nov 2025</span>
+</div>
+</div>
+<!-- Document 5: Police BGV Certificate -->
+<div class="bg-surface p-space-md rounded shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container">local_police</span>
+<div>
+<div class="font-subheading text-body-sm text-on-surface">Bengaluru Police BGV Clearance</div>
+<div class="font-label-md text-label-md text-on-surface">Certificate #BLR-POL-2023-8821</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-tertiary-container font-label-sm text-label-sm font-semibold">CLEARED</span>
+</div>
+<div class="mt-2 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Zero criminal or traffic FIR records found</span>
+<a class="text-on-surface font-medium underline" href="#">View NOC</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Document Preview Visual Card (Thumbnail Grid) -->
+<div class="bg-surface p-space-md rounded shadow-sm">
+<div class="font-subheading text-body-sm text-on-surface font-semibold mb-2">Stored Document Imagery</div>
+<div class="grid grid-cols-3 gap-space-xs">
+<div class="p-1 rounded bg-surface-container-lowest shadow-sm">
+<img class="w-full h-16 rounded object-cover" data-alt="Official smart card driving license photo showing Karnataka State transport seal clearly in daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr3kBSZ5_EyROJkWj53wETG4xyT3cSWGReFU8iBIo_F5A53SLgwQZPPNwFr2VtTc84rmy9OjORnsaCxsDt01vU3-whcBZWFPoiyjRq3FlPiNHwCQBX_2ALYzorQX0cKZHEOiU_ZQXen1m_w2mCSono_rhi4_hPswLaL3v5IdeL5bWQ4Z890PEgh28-xS07F1cES1g5JwrU4nAbgByOPtiYx9bTNACXNQKzJVPO0nLu"/>
+<div class="font-label-sm text-label-sm text-on-surface-variant truncate mt-1 text-center">DL Smart Card</div>
+</div>
+<div class="p-1 rounded bg-surface-container-lowest shadow-sm">
+<img class="w-full h-16 rounded object-cover" data-alt="Clear high resolution photograph of two wheeler motor bike registration smart card certificate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9I9sUEubLqGb9YzjYTD--c1J48aPKBZk0MRodBKE3L9M8UnVV3PPkY3dQBfsfXCfsHHk7VGn4W-3l9HqW_tiZFlraQKH0k-D4UQ3xOMeVd7Tn1eAOEEiD-S5Yo5YrcPE6Tqy2-y1OKWnLgdZORZz0ZwC1ZrQKGoGUoCHkywAhhVKCO59dwu6-CHHjvpK2DxhRETKlvBxNDVxuC61TfCMd37Fo-Tin3teBxCDZT8GK"/>
+<div class="font-label-sm text-label-sm text-on-surface-variant truncate mt-1 text-center">RC Certificate</div>
+</div>
+<div class="p-1 rounded bg-surface-container-lowest shadow-sm">
+<img class="w-full h-16 rounded object-cover" data-alt="Bengaluru police department background verification clearance slip stamped with official green ink seal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0xO05ApRhyjUYD3Imn0hNU2tW9hC8rSHymRWe8RGjnRH_xBWgkHH7IZljVLlSPaiPFRCzzhvwNe9RJ-CUZAjPDRa4lSaTFZiVvsxy7KdXcpepHrrwz7_sUk9S3pN-CkGtDSt_ES1mOgNj-3OqKwS7WVOJUhkWstaVnmpIrhYZKqjOo1Dhiy1MhMbECPBrGPpwhpW0HAc2Riu1aQ670NXYmoJHileyWjbk-TZYWKeu"/>
+<div class="font-label-sm text-label-sm text-on-surface-variant truncate mt-1 text-center">Police NOC</div>
+</div>
+</div>
+</div>
+<!-- Ops Action Triggers Box -->
+<div class="bg-surface-container-low p-space-md rounded">
+<div class="font-subheading text-body-sm text-on-surface font-semibold mb-space-sm">Administrative Interventions</div>
+<div class="flex flex-col gap-space-xs">
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="h-9 px-space-sm rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-colors font-subheading text-body-sm flex items-center justify-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-error">power_settings_new</span>
+<span>Force Offline</span>
+</button>
+<button class="h-9 px-space-sm rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-colors font-subheading text-body-sm flex items-center justify-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">warning_amber</span>
+<span>Issue Warning</span>
+</button>
+</div>
+<button class="w-full h-10 px-space-md rounded bg-primary text-on-primary hover:bg-inverse-surface transition-colors font-subheading text-body-sm flex items-center justify-center gap-space-xs shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">currency_rupee</span>
+<span>Add ₹500 Performance Incentive</span>
+</button>
+<div class="flex items-center justify-between pt-space-xs">
+<button class="font-label-sm text-label-sm text-error underline hover:text-on-error-container" type="button">Suspend Captain Account</button>
+<button class="font-label-sm text-label-sm text-on-surface underline hover:text-on-surface-variant" type="button">Request Document Re-verification</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

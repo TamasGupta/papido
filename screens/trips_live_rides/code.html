@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-container": "#d6e0f4", "surface-container-high": "#dce9ff", "surface-container-highest": "#d3e4fe", "inverse-primary": "#c0c6db", "on-error-container": "#93000a", "on-tertiary": "#ffffff", "outline-variant": "#c6c6cd", "inverse-surface": "#213145", "surface-variant": "#d3e4fe", "secondary": "#555f70", "on-primary-fixed-variant": "#404758", "on-tertiary-fixed": "#002109", "surface-dim": "#cbdbf5", "outline": "#76777d", "on-surface": "#0b1c30", "surface-container-low": "#eff4ff", "secondary-fixed-dim": "#bdc7db", "primary-fixed": "#dce2f7", "on-surface-variant": "#45464c", "background": "#f8f9ff", "surface-tint": "#575e70", "tertiary": "#000000", "tertiary-fixed-dim": "#62df7d", "on-error": "#ffffff", "on-tertiary-container": "#009842", "on-primary-container": "#7d8497", "on-primary-fixed": "#141b2b", "primary-fixed-dim": "#c0c6db", "on-secondary-container": "#596374", "secondary-fixed": "#d9e3f7", "primary-container": "#141b2b", "tertiary-fixed": "#7ffc97", "on-secondary-fixed": "#121c2a", "surface-bright": "#f8f9ff", "on-primary": "#ffffff", "error-container": "#ffdad6", "on-background": "#0b1c30", "tertiary-container": "#002109", "surface": "#f8f9ff", "surface-container": "#e5eeff", "inverse-on-surface": "#eaf1ff", "surface-container-lowest": "#ffffff", "primary": "#000000", "on-secondary-fixed-variant": "#3d4757", "on-tertiary-fixed-variant": "#005320", "on-secondary": "#ffffff", "error": "#ba1a1a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "1.5rem", "gutter": "0.75rem", "space-sm": "0.5rem", "space-md": "0.75rem", "margin": "1rem", "space-lg": "1rem", "space-xs": "0.25rem" }, "fontFamily": { "body-lg": ["Inter"], "body-sm": ["Inter"], "body-md": ["Inter"], "headline-sm": ["Inter"], "display": ["Inter"], "subheading": ["Inter"], "headline-lg": ["Inter"], "headline-md": ["Inter"], "label-sm": ["Inter"], "code-otp": ["Inter"], "label-md": ["Inter"] }, "fontSize": { "body-lg": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "subheading": ["16px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-lg": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "code-otp": ["24px", { "lineHeight": "28px", "letterSpacing": "0.15em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }] } } } }</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-primary-container border-r border-outline/20 z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="px-space-lg py-space-lg border-b border-outline/20 flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="w-9 h-9 rounded bg-surface-container-lowest flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[22px]">two_wheeler</span></div><div><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-surface-container-lowest tracking-tight">PAPIDO</span><span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm uppercase">Ops</span></div><div class="font-label-sm text-label-sm text-on-primary-container tracking-wider uppercase">Ops Command BLR</div></div></div></div><div class="px-space-md py-space-sm border-b border-outline/20 bg-primary-container"><button class="w-full flex items-center justify-between px-space-md py-space-sm rounded bg-inverse-surface border border-outline/30 text-surface-container-lowest hover:bg-inverse-surface/80 transition-colors" type="button"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[16px] text-surface-container-lowest">location_city</span><div class="text-left"><div class="font-label-xs text-on-primary-container font-label-sm text-label-sm">Active Jurisdiction</div><div class="font-subheading text-body-sm text-surface-container-lowest truncate max-w-[140px]">BLR South & East</div></div></div><span class="material-symbols-outlined text-[18px] text-on-primary-container">unfold_more</span></button></div><div class="px-space-md py-space-sm border-b border-outline/20"><div class="flex items-center justify-between px-space-sm py-1"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-on-tertiary-container animate-pulse"></span><span class="font-label-sm text-label-sm text-surface-container-lowest font-medium">Live Telemetry</span></div><span class="font-label-sm text-label-sm text-on-primary-container">99.98% SLA</span></div></div><div class="px-space-md pt-space-md"><div class="px-space-sm pb-space-xs font-label-sm text-label-sm text-on-primary-container uppercase tracking-wider">Operational Modules</div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-inverse-surface text-surface-container-lowest border-l-2 border-surface-container-lowest font-subheading"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded text-on-primary-container hover:bg-inverse-surface hover:text-surface-container-lowest transition-all group" data-path="live-operations-dispatch" href="#"><span class="material-symbols-outlined text-[20px] text-on-primary-container group-hover:text-surface-container-lowest transition-colors">radar</span><span class="font-body-md text-body-md">Live Ops & Dispatch</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded text-on-primary-container hover:bg-inverse-surface hover:text-surface-container-lowest transition-all group" data-path="fleet-rider-partners" href="#"><span class="material-symbols-outlined text-[20px] text-on-primary-container group-hover:text-surface-container-lowest transition-colors">badge</span><span class="font-body-md text-body-md">Fleet & Rider Partners</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm rounded transition-all group bg-inverse-surface text-surface-container-lowest border-l-2 border-surface-container-lowest font-subheading" data-path="trips-live-rides" href="#"><span class="material-symbols-outlined text-[20px] text-on-primary-container group-hover:text-surface-container-lowest transition-colors">route</span><span class="font-body-md text-body-md">Trips & Live Rides</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded text-on-primary-container hover:bg-inverse-surface hover:text-surface-container-lowest transition-all group" data-path="surge-pricing-engine" href="#"><span class="material-symbols-outlined text-[20px] text-on-primary-container group-hover:text-surface-container-lowest transition-colors">trending_up</span><span class="font-body-md text-body-md">Surge & Pricing Engine</span></a></nav></div></div><div class="p-space-md border-t border-outline/20"><div class="flex items-center justify-between p-space-sm rounded bg-inverse-surface border border-outline/30"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded bg-surface-container-lowest flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[18px]">admin_panel_settings</span></div><div class="text-left"><div class="font-body-sm text-body-sm text-surface-container-lowest font-medium leading-none">Ops Director</div><div class="font-label-sm text-label-sm text-on-primary-container mt-0.5">bengaluru-hq@papido.in</div></div></div><button class="text-on-primary-container hover:text-surface-container-lowest transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">logout</span></button></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest border-b border-outline/20 z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg flex-1"><div class="relative w-full max-w-md"><span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full pl-9 pr-space-md py-1.5 bg-surface border border-outline/30 rounded font-body-sm text-body-sm text-on-surface placeholder-outline focus:outline-none focus:border-primary transition-all" placeholder="Search Rider ID, Trip ID, KA-01-XX-0000..." type="text"/></div><div class="hidden xl:flex items-center gap-space-sm"><div class="flex items-center gap-space-xs px-2.5 py-1 rounded bg-error-container/30 border border-error/40 text-on-error-container font-label-md text-label-md"><span class="material-symbols-outlined text-error text-[16px]">fmd_bad</span><span class="font-medium">2 Active SOS</span></div><div class="flex items-center gap-space-xs px-2.5 py-1 rounded bg-surface-container-low border border-outline/30 text-secondary font-label-md text-label-md"><span class="material-symbols-outlined text-secondary text-[16px]">pending_actions</span><span class="font-medium">42 KYC Pending</span></div></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex flex-col text-right pr-space-md border-r border-outline/20"><div class="font-label-sm text-label-sm text-on-surface font-semibold">14:24:08 IST</div><div class="font-label-sm text-label-sm text-on-surface-variant">08:54:08 UTC</div></div><div class="flex items-center gap-space-xs"><button class="w-9 h-9 rounded border border-outline/30 flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><button class="w-9 h-9 rounded border border-outline/30 flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">refresh</span></button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- Sub-header Breadcrumb and Live Ops Control Bar -->
+<div class="px-space-xl py-space-md bg-surface-container-lowest flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span>Ops Command BLR</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>Fleet Monitoring</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-md text-label-md uppercase tracking-wider">Trips & Live Rides</span>
+<span class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-low text-on-tertiary-container font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container animate-ping"></span>
+        STREAM ACTIVE
+      </span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-space-xs px-space-md py-1.5 rounded bg-surface-container-low text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">calendar_today</span>
+<span>Today (18 Oct 2024)</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-md py-1.5 rounded bg-surface-container-low text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>
+<span>Bengaluru (All Clusters)</span>
+</div>
+<button class="flex items-center gap-space-xs px-space-md py-1.5 rounded bg-primary text-on-primary font-label-md text-label-md hover:bg-inverse-surface transition-colors">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Export Shift Audit</span>
+</button>
+</div>
+</div>
+<!-- Operational Metrics Ticker / Bento Stat Strip -->
+<div class="p-space-xl pb-0">
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Metric 1: Total Trips & GMV -->
+<div class="p-space-lg rounded bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-start justify-between">
+<div>
+<div class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Total Rides Stream</div>
+<div class="font-display text-display text-on-surface mt-1 tracking-tight">14,820</div>
+</div>
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[20px]">moped</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low/50 rounded p-space-sm flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-secondary">GMV Today</span>
+<span class="font-subheading text-body-sm text-on-surface font-semibold tracking-tight">₹9,84,320.00</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-0.5 bg-surface-container group-hover:bg-primary transition-all"></div>
+</div>
+<!-- Metric 2: Fares, Avg Distance & Duration -->
+<div class="p-space-lg rounded bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-start justify-between">
+<div>
+<div class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Avg Fare Realized</div>
+<div class="font-display text-display text-on-surface mt-1 tracking-tight">₹66.40</div>
+</div>
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low/50 rounded p-space-sm flex items-center justify-between text-secondary font-label-md text-label-md">
+<span>Avg Distance: <strong class="text-on-surface font-semibold">5.2 km</strong></span>
+<span>•</span>
+<span>Duration: <strong class="text-on-surface font-semibold">15.4 min</strong></span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-0.5 bg-surface-container group-hover:bg-primary transition-all"></div>
+</div>
+<!-- Metric 3: Fulfillment & Cancellation Rate -->
+<div class="p-space-lg rounded bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-start justify-between">
+<div>
+<div class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Fleet Completion SLA</div>
+<div class="font-display text-display text-on-surface mt-1 tracking-tight">97.8%</div>
+</div>
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low/50 rounded p-space-sm flex items-center justify-between text-secondary font-label-md text-label-md">
+<span>Rider Drop: <strong class="text-on-surface font-semibold">1.8%</strong></span>
+<span>•</span>
+<span>Pax Cancel: <strong class="text-on-surface font-semibold">0.4%</strong></span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-0.5 bg-surface-container group-hover:bg-primary transition-all"></div>
+</div>
+<!-- Metric 4: Active Disputes & Safety -->
+<div class="p-space-lg rounded bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-start justify-between">
+<div>
+<div class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Active Disputes / SOS</div>
+<div class="font-display text-display text-error mt-1 tracking-tight">08 <span class="font-body-md text-body-md text-secondary">Open</span></div>
+</div>
+<div class="w-10 h-10 rounded bg-error-container/40 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low/50 rounded p-space-sm flex items-center justify-between font-label-md text-label-md">
+<span class="text-secondary">Avg MTTR SLA</span>
+<span class="text-on-surface font-semibold">8.2 mins</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-0.5 bg-error group-hover:bg-error transition-all"></div>
+</div>
+</div>
+</div>
+<!-- Main Workstation Layout: Left Data Grid & Right Telemetry Drawer -->
+<div class="p-space-xl flex flex-col xl:flex-row gap-space-lg items-start">
+<!-- Left: Data Management & Table Panel -->
+<div class="flex-1 w-full bg-surface-container-lowest rounded shadow-sm flex flex-col min-w-0">
+<!-- Toolbar, Tabs & Live Search -->
+<div class="p-space-lg bg-surface-container-lowest flex flex-col gap-space-md">
+<!-- Status Filter Tabs -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 text-nowrap">
+<button class="px-space-md py-1.5 rounded font-label-md text-label-md bg-primary text-on-primary font-semibold flex items-center gap-1.5 shadow-sm">
+<span>All Rides</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm">14,820</span>
+</button>
+<button class="px-space-md py-1.5 rounded font-label-md text-label-md bg-surface-container-low text-secondary hover:text-on-surface flex items-center gap-1.5 transition-colors">
+<span>In Progress</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">1,394</span>
+</button>
+<button class="px-space-md py-1.5 rounded font-label-md text-label-md bg-surface-container-low text-secondary hover:text-on-surface flex items-center gap-1.5 transition-colors">
+<span>Completed</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">13,102</span>
+</button>
+<button class="px-space-md py-1.5 rounded font-label-md text-label-md bg-surface-container-low text-secondary hover:text-on-surface flex items-center gap-1.5 transition-colors">
+<span>Cancelled</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">316</span>
+</button>
+<button class="px-space-md py-1.5 rounded font-label-md text-label-md bg-error-container/30 text-on-error-container hover:bg-error-container/50 flex items-center gap-1.5 transition-colors font-semibold">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span>Disputed / Safety</span>
+<span class="px-1.5 py-0.2 rounded bg-error text-on-error font-label-sm text-label-sm">8</span>
+</button>
+</div>
+<!-- Query Filter Bar -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-xs">
+<div class="relative w-full sm:max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary text-[18px]">search</span>
+<input class="w-full pl-9 pr-space-md py-2 bg-surface-container-low text-on-surface rounded font-body-sm text-body-sm placeholder-secondary focus:outline-none focus:ring-1 focus:ring-primary transition-all" placeholder="Search Trip CRN #, Passenger Name, Captain Name, Phone..." type="text" value="CRN #91820412"/>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto justify-end">
+<div class="flex items-center gap-space-xs px-space-md py-2 bg-surface-container-low rounded text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">tune</span>
+<span>Payment: All UPI</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-md py-2 bg-surface-container-low rounded text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">shield</span>
+<span>Helmet Audit: Passed</span>
+</div>
+<button class="p-2 bg-surface-container-low rounded text-secondary hover:text-on-surface hover:bg-surface-container transition-colors" title="Refresh Live Queue">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+</button>
+</div>
+</div>
+</div>
+<!-- High Density Rides Table -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm text-on-surface">
+<thead class="bg-surface-container-low text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+<tr>
+<th class="py-space-md px-space-lg">Trip CRN & Dispatch</th>
+<th class="py-space-md px-space-md">Passenger</th>
+<th class="py-space-md px-space-md">Captain & Vehicle</th>
+<th class="py-space-md px-space-md">Route Waypoints</th>
+<th class="py-space-md px-space-md">Fare Breakdown</th>
+<th class="py-space-md px-space-md">Ride Status</th>
+<th class="py-space-md px-space-md">Telemetry / Safety</th>
+<th class="py-space-md px-space-lg text-right">Quick Ops</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Row 1: Active Selected Focus (CRN #91820412) -->
+<tr class="bg-surface-container-high/40 hover:bg-surface-container-high/70 transition-colors cursor-pointer">
+<td class="py-space-lg px-space-lg">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span>
+<div class="font-subheading text-body-md text-on-surface font-semibold tracking-tight">CRN #91820412</div>
+</div>
+<div class="text-secondary font-label-sm text-label-sm mt-0.5">Today 08:42 AM IST</div>
+<div class="mt-1 flex items-center gap-1">
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-secondary font-label-sm text-label-sm">Android PWA</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">Instant Pick</span>
+</div>
+</td>
+<td class="py-space-lg px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center font-subheading text-body-sm font-bold text-on-surface">AS</div>
+<div>
+<div class="flex items-center gap-1 font-subheading text-body-sm text-on-surface font-medium">
+<span>Aarav Sharma</span>
+<span class="flex items-center text-[12px] text-on-surface font-semibold">4.8★</span>
+</div>
+<div class="text-secondary font-label-sm text-label-sm mt-0.5">+91 98450 32190</div>
+<div class="font-label-sm text-label-sm text-secondary">Verified KYC</div>
+</div>
+</div>
+</td>
+<td class="py-space-lg px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-primary text-on-primary flex items-center justify-center font-subheading text-body-sm font-bold">RK</div>
+<div>
+<div class="flex items-center gap-1 font-subheading text-body-sm text-on-surface font-medium">
+<span>Rajesh Kumar</span>
+<span class="flex items-center text-[12px] text-on-surface font-semibold">4.9★</span>
+</div>
+<div class="text-secondary font-label-sm text-label-sm mt-0.5">Hero Splendor Plus</div>
+<div class="inline-block mt-0.5 px-1.5 py-0.2 rounded bg-surface-container-highest text-on-surface font-label-sm text-label-sm tracking-wide font-semibold">KA 01 EK 8842</div>
+</div>
+</div>
+</td>
+<td class="py-space-lg px-space-md max-w-xs">
+<div class="flex flex-col gap-1">
+<div class="flex items-start gap-1.5">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container mt-1 shrink-0"></span>
+<span class="text-on-surface font-body-sm text-body-sm font-medium line-clamp-1">Sony World Signal, Koramangala</span>
+</div>
+<div class="w-0.5 h-2 bg-secondary ml-0.5"></div>
+<div class="flex items-start gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary mt-1 shrink-0"></span>
+<span class="text-secondary font-body-sm text-body-sm line-clamp-1">Indiranagar Metro Station Gate 2</span>
+</div>
+</div>
+</td>
+<td class="py-space-lg px-space-md">
+<div class="font-subheading text-body-md text-on-surface font-bold tracking-tight">₹68.00</div>
+<div class="text-secondary font-label-sm text-label-sm mt-0.5">Base ₹30 + Dist ₹43.20</div>
+<div class="text-on-tertiary-container font-label-sm text-label-sm font-semibold">Promo ₹-24.20</div>
+<span class="inline-flex items-center gap-1 mt-1 text-secondary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+                  GPay UPI Confirmed
+                </span>
+</td>
+<td class="py-space-lg px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-on-tertiary-container font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[14px]">done_all</span>
+                  Completed
+                </span>
+<div class="text-secondary font-label-sm text-label-sm mt-1">Elapsed: 16m 12s</div>
+</td>
+<td class="py-space-lg px-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-secondary">OTP:</span>
+<span class="px-1.5 py-0.5 rounded bg-primary-container text-surface-container-lowest font-mono font-bold text-label-sm tracking-wider">4821</span>
+</div>
+<div class="flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px]">sports_motorsports</span>
+<span>Helmet Selfie OK</span>
+</div>
+<div class="flex items-center gap-1 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+<span>No SOS Trigger</span>
+</div>
+</div>
+</td>
+<td class="py-space-lg px-space-lg text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" title="Inspect Telemetry">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+</button>
+<button class="p-1.5 rounded bg-surface-container text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Receipt PDF">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</button>
+<button class="p-1.5 rounded bg-surface-container text-error hover:bg-error-container/40 transition-colors" title="Dispute & Refund">
+<span class="material-symbols-outlined text-[18px]">currency_exchange</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: In Progress Ride -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-lg px-space-lg">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-surface-tint animate-pulse"></span>
+<div class="font-subheading text-body-md text-on-surface font-semibold tracking-tight">CRN #91820498</div>
+</div>
+<div class="text-secondary font-label-sm text-label-sm mt-0.5">Today 09:04 AM IST</div>
+<div class="mt-1 flex items-center gap-1">
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-secondary font-label-sm text-label-sm">iOS Native</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-secondary font-label-sm text-label-sm">Fast Track</span>
+</div>
+</td>
+<td class="py-space-lg px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center font-subheading text-body-sm font-bold text-on-surface">PV</div>
+<div>
+<div class="flex items-center gap-1 font-subheading text-body-sm text-on-surface font-medium">
+<span>Pooja Venkat</span>
+<span class="flex items-center text-[12px] text-on-surface font-semibold">4.9★</span>
+</div>
+<div class="text-secondary font-label-sm text-label-sm mt-0.5">+91 97401 84930</div>
+<div class="font-label-sm text-label-sm text-secondary">Verified KYC</div>
+</div>
+</div>
+</td>
+<td class="py-space-lg px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container-high text-on-surface flex items-center justify-center font-subheading text-body-sm font-bold">MS</div>
+<div>
+<div class="flex items-center gap-1 font-subheading text-body-sm text-on-surface font-medium">
+<span>Manjunath S</span>
+<span class="flex items-center text-[12px] text-on-surface font-semibold">4.7★</span>
+</div>
+<div class="text-secondary font-label-sm text-label-sm mt-0.5">Bajaj Pulsar 150</div>
+<div class="inline-block mt-0.5 px-1.5 py-0.2 rounded bg-surface-container-highest text-on-surface font-label-sm text-label-sm tracking-wide font-semibold">KA 03 HP 2901</div>
+</div>
+</div>
+</td>
+<td class="py-space-lg px-space-md max-w-xs">
+<div class="flex flex-col gap-1">
+<div class="flex items-start gap-1.5">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container mt-1 shrink-0"></span>
+<span class="text-on-surface font-body-sm text-body-sm font-medium line-clamp-1">HSR Sector 2, 27th Main</span>
+</div>
+<div class="w-0.5 h-2 bg-secondary ml-0.5"></div>
+<div class="flex items-start gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary mt-1 shrink-0"></span>
+<span class="text-secondary font-body-sm text-body-sm line-clamp-1">EcoSpace Tech Park, Bellandur</span>
+</div>
+</div>
+</td>
+<td class="py-space-lg px-space-md">
+<div class="font-subheading text-body-md text-on-surface font-bold tracking-tight">₹74.50</div>
+<div class="text-secondary font-label-sm text-label-sm mt-0.5">Base ₹30 + Dist ₹44.50</div>
+<span class="inline-flex items-center gap-1 mt-1 text-secondary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+                  Paytm Wallet Auth
+                </span>
+</td>
+<td class="py-space-lg px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[14px]">navigation</span>
+                  En Route to Drop
+                </span>
+<div class="text-secondary font-label-sm text-label-sm mt-1">ETA: 4 mins away</div>
+</td>
+<td class="py-space-lg px-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-secondary">OTP:</span>
+<span class="px-1.5 py-0.5 rounded bg-primary-container text-surface-container-lowest font-mono font-bold text-label-sm tracking-wider">9104</span>
+</div>
+<div class="flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px]">sports_motorsports</span>
+<span>Helmet Verified</span>
+</div>
+<div class="flex items-center gap-1 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">speed</span>
+<span>Telemetry Normal</span>
+</div>
+</div>
+</td>
+<td class="py-space-lg px-space-lg text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" title="Live Telemetry">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+</button>
+<button class="p-1.5 rounded bg-surface-container text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Track Live">
+<span class="material-symbols-outlined text-[18px]">near_me</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Arrived at Pickup State -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-lg px-space-lg">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<div class="font-subheading text-body-md text-on-surface font-semibold tracking-tight">CRN #91820504</div>
+</div>
+<div class="text-secondary font-label-sm text-label-sm mt-0.5">Today 09:12 AM IST</div>
+<div class="mt-1 flex items-center gap-1">
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-secondary font-label-sm text-label-sm">Android APK</span>
+</div>
+</td>
+<td class="py-space-lg px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center font-subheading text-body-sm font-bold text-on-surface">KN</div>
+<div>
+<div class="flex items-center gap-1 font-subheading text-body-sm text-on-surface font-medium">
+<span>Karan Nair</span>
+<span class="flex items-center text-[12px] text-on-surface font-semibold">4.6★</span>
+</div>
+<div class="text-secondary font-label-sm text-label-sm mt-0.5">+91 96112 04892</div>
+</div>
+</div>
+</td>
+<td class="py-space-lg px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container-high text-on-surface flex items-center justify-center font-subheading text-body-sm font-bold">SN</div>
+<div>
+<div class="flex items-center gap-1 font-subheading text-body-sm text-on-surface font-medium">
+<span>Suresh N</span>
+<span class="flex items-center text-[12px] text-on-surface font-semibold">4.8★</span>
+</div>
+<div class="text-secondary font-label-sm text-label-sm mt-0.5">TVS Apache RTR</div>
+<div class="inline-block mt-0.5 px-1.5 py-0.2 rounded bg-surface-container-highest text-on-surface font-label-sm text-label-sm tracking-wide font-semibold">KA 05 JV 7710</div>
+</div>
+</div>
+</td>
+<td class="py-space-lg px-space-md max-w-xs">
+<div class="flex flex-col gap-1">
+<div class="flex items-start gap-1.5">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container mt-1 shrink-0"></span>
+<span class="text-on-surface font-body-sm text-body-sm font-medium line-clamp-1">Kalyan Nagar Main Road</span>
+</div>
+<div class="w-0.5 h-2 bg-secondary ml-0.5"></div>
+<div class="flex items-start gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary mt-1 shrink-0"></span>
+<span class="text-secondary font-body-sm text-body-sm line-clamp-1">Manyata Embassy Business Park</span>
+</div>
+</div>
+</td>
+<td class="py-space-lg px-space-md">
+<div class="font-subheading text-body-md text-on-surface font-bold tracking-tight">₹52.00</div>
+<div class="text-secondary font-label-sm text-label-sm mt-0.5">Cash Ride Pending</div>
+<span class="inline-flex items-center gap-1 mt-1 text-secondary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Cash Collection
+                </span>
+</td>
+<td class="py-space-lg px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[14px]">pin_drop</span>
+                  Arrived at Pickup
+                </span>
+<div class="text-secondary font-label-sm text-label-sm mt-1">Wait Time: 1m 40s</div>
+</td>
+<td class="py-space-lg px-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-secondary">OTP:</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-mono font-bold text-label-sm tracking-wider">3199</span>
+</div>
+<div class="text-secondary font-label-sm text-label-sm">Pending Boarding</div>
+</div>
+</td>
+<td class="py-space-lg px-space-lg text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</button>
+<button class="p-1.5 rounded bg-surface-container text-error hover:bg-error-container/40 transition-colors">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Disputed Fare Case -->
+<tr class="hover:bg-error-container/10 transition-colors">
+<td class="py-space-lg px-space-lg">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<div class="font-subheading text-body-md text-on-surface font-semibold tracking-tight">CRN #91820351</div>
+</div>
+<div class="text-secondary font-label-sm text-label-sm mt-0.5">Today 07:58 AM IST</div>
+<div class="mt-1 flex items-center gap-1">
+<span class="px-1.5 py-0.2 rounded bg-error-container/30 text-on-error-container font-label-sm text-label-sm font-semibold">Dispute Flag</span>
+</div>
+</td>
+<td class="py-space-lg px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center font-subheading text-body-sm font-bold text-on-surface">DM</div>
+<div>
+<div class="flex items-center gap-1 font-subheading text-body-sm text-on-surface font-medium">
+<span>Divya M</span>
+<span class="flex items-center text-[12px] text-on-surface font-semibold">4.4★</span>
+</div>
+<div class="text-secondary font-label-sm text-label-sm mt-0.5">+91 99002 11983</div>
+</div>
+</div>
+</td>
+<td class="py-space-lg px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container-high text-on-surface flex items-center justify-center font-subheading text-body-sm font-bold">AK</div>
+<div>
+<div class="flex items-center gap-1 font-subheading text-body-sm text-on-surface font-medium">
+<span>Anand K</span>
+<span class="flex items-center text-[12px] text-on-surface font-semibold">4.6★</span>
+</div>
+<div class="text-secondary font-label-sm text-label-sm mt-0.5">Honda Activa 6G</div>
+<div class="inline-block mt-0.5 px-1.5 py-0.2 rounded bg-surface-container-highest text-on-surface font-label-sm text-label-sm tracking-wide font-semibold">KA 04 JB 1120</div>
+</div>
+</div>
+</td>
+<td class="py-space-lg px-space-md max-w-xs">
+<div class="flex flex-col gap-1">
+<div class="flex items-start gap-1.5">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container mt-1 shrink-0"></span>
+<span class="text-on-surface font-body-sm text-body-sm font-medium line-clamp-1">Silk Board Junction Flyover</span>
+</div>
+<div class="w-0.5 h-2 bg-secondary ml-0.5"></div>
+<div class="flex items-start gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary mt-1 shrink-0"></span>
+<span class="text-secondary font-body-sm text-body-sm line-clamp-1">Electronic City Phase 1 Toll</span>
+</div>
+</div>
+</td>
+<td class="py-space-lg px-space-md">
+<div class="font-subheading text-body-md text-error font-bold tracking-tight">₹142.00</div>
+<div class="text-error font-label-sm text-label-sm mt-0.5">Toll Overcharge Disputed</div>
+<span class="inline-flex items-center gap-1 mt-1 text-secondary font-label-sm text-label-sm">
+                  PhonePe Auto Debit
+                </span>
+</td>
+<td class="py-space-lg px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container/30 text-on-error-container font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[14px]">gavel</span>
+                  Disputed Fare
+                </span>
+<div class="text-secondary font-label-sm text-label-sm mt-1">Ticket #89110</div>
+</td>
+<td class="py-space-lg px-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-secondary">OTP:</span>
+<span class="px-1.5 py-0.5 rounded bg-primary-container text-surface-container-lowest font-mono font-bold text-label-sm tracking-wider">6612</span>
+</div>
+<div class="text-on-error-container font-label-sm text-label-sm font-semibold">Deviation +2.8 km</div>
+</div>
+</td>
+<td class="py-space-lg px-space-lg text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2.5 py-1 rounded bg-error text-on-error font-label-md text-label-md font-medium hover:bg-on-error-container transition-colors">
+                    Arbitrate
+                  </button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination Footer -->
+<div class="p-space-lg bg-surface-container-lowest flex flex-wrap items-center justify-between gap-space-md text-secondary font-label-md text-label-md">
+<div>Showing <strong class="text-on-surface">1 - 4</strong> of 14,820 live dispatches (Partitioned shard BLR-01)</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-1.5 rounded bg-surface-container-low text-on-surface hover:bg-surface-container disabled:opacity-50" disabled="">Previous</button>
+<button class="px-space-md py-1.5 rounded bg-primary text-on-primary font-semibold">1</button>
+<button class="px-space-md py-1.5 rounded bg-surface-container-low text-on-surface hover:bg-surface-container">2</button>
+<button class="px-space-md py-1.5 rounded bg-surface-container-low text-on-surface hover:bg-surface-container">3</button>
+<span class="px-1">...</span>
+<button class="px-space-md py-1.5 rounded bg-surface-container-low text-on-surface hover:bg-surface-container">370</button>
+<button class="px-space-md py-1.5 rounded bg-surface-container-low text-on-surface hover:bg-surface-container">Next</button>
+</div>
+</div>
+</div>
+<!-- Right: Telemetry Deep-Inspection Panel / Selected Ride Docket (CRN #91820412) -->
+<div class="w-full xl:w-[460px] shrink-0 flex flex-col gap-space-lg">
+<!-- Docket Container -->
+<div class="bg-surface-container-lowest rounded shadow-sm p-space-lg flex flex-col gap-space-lg">
+<!-- Header & Action Ribbon -->
+<div class="flex items-start justify-between gap-space-md pb-space-sm bg-surface-container-lowest">
+<div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm uppercase font-semibold">CRN #91820412</span>
+<span class="text-on-tertiary-container font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+                AUDITED & VERIFIED
+              </span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface mt-1 font-bold">Trip Telemetry Inspection</div>
+<div class="text-secondary font-label-sm text-label-sm mt-0.5">Sony World Signal ➔ Indiranagar Gate 2</div>
+</div>
+<button class="p-1.5 rounded bg-surface-container text-secondary hover:text-on-surface transition-colors" title="Full Screen View">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+</div>
+<!-- GPS Breadcrumb Map Visual Snippet -->
+<div class="relative w-full h-52 rounded overflow-hidden bg-surface-container">
+<div class="w-full h-full bg-cover bg-center" data-location="Koramangala 100ft Road Domlur Indiranagar Bengaluru" style=""></div>
+<!-- Top Telemetry Pill Overlay -->
+<div class="absolute top-3 left-3 bg-inverse-surface/90 text-surface-container-lowest px-2.5 py-1 rounded text-label-sm font-label-sm flex items-center gap-2 backdrop-blur-sm">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span>
+<span>Traversed: <strong>5.4 km</strong> via Domlur Flyover</span>
+</div>
+<!-- Bottom Speed Flag Overlay -->
+<div class="absolute bottom-3 right-3 bg-inverse-surface/90 text-surface-container-lowest px-2.5 py-1 rounded text-label-sm font-label-sm flex items-center gap-1.5 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed">sensors</span>
+<span>GPS Ping: 1.0s Interval</span>
+</div>
+</div>
+<!-- Telemetry Graphs & Dynamics -->
+<div class="flex flex-col gap-space-sm bg-surface-container-low p-space-md rounded">
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span class="uppercase tracking-wider font-semibold text-on-surface">Velocity Telemetry Profile</span>
+<span>Peak: <strong class="text-on-surface font-semibold">44 km/h</strong> | Avg: <strong class="text-on-surface font-semibold">28 km/h</strong></span>
+</div>
+<!-- Inline SVG Speed Sparkline with Acceleration Profiles -->
+<div class="w-full h-16 pt-2">
+<svg class="w-full h-full text-primary" fill="none" preserveaspectratio="none" viewbox="0 0 400 80">
+<path d="M 0 65 Q 40 40 80 50 T 160 20 T 240 30 T 320 25 T 400 68" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path>
+<path d="M 0 65 Q 40 40 80 50 T 160 20 T 240 30 T 320 25 T 400 68 L 400 80 L 0 80 Z" fill="currentColor" fill-opacity="0.08"></path>
+<circle class="fill-primary" cx="160" cy="20" r="4"></circle>
+<text class="font-mono text-[10px] fill-current font-bold" x="165" y="16">44 km/h</text>
+</svg>
+</div>
+<div class="grid grid-cols-3 gap-space-xs pt-space-xs text-center font-label-sm text-label-sm">
+<div class="p-1 rounded bg-surface-container-lowest">
+<span class="text-secondary block">Harsh Braking</span>
+<strong class="text-on-surface font-bold">0 Events</strong>
+</div>
+<div class="p-1 rounded bg-surface-container-lowest">
+<span class="text-secondary block">Rapid Accel</span>
+<strong class="text-on-surface font-bold">0 Events</strong>
+</div>
+<div class="p-1 rounded bg-surface-container-lowest">
+<span class="text-secondary block">Route Drift</span>
+<strong class="text-on-tertiary-container font-bold">< 15m (Normal)</strong>
+</div>
+</div>
+</div>
+<!-- Captain & Rider Pairing Micro-Card -->
+<div class="flex items-center justify-between p-space-md rounded bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded bg-primary text-on-primary flex items-center justify-center font-headline-sm font-bold">RK</div>
+<div>
+<div class="font-subheading text-body-sm text-on-surface font-semibold">Rajesh Kumar (Captain)</div>
+<div class="text-secondary font-label-sm text-label-sm">Hero Splendor • KA 01 EK 8842</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-subheading text-body-sm text-on-surface font-bold">4.9 ★ Rating</div>
+<div class="text-secondary font-label-sm text-label-sm">1,492 Lifetime Rides</div>
+</div>
+</div>
+<!-- Itemized Payment Ledger & Settlement Split -->
+<div class="flex flex-col gap-space-xs bg-surface-container-low p-space-md rounded">
+<div class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold mb-1">Audit Ledger & Split Settlement</div>
+<div class="flex justify-between items-center text-body-sm text-body-sm py-1">
+<span class="text-secondary">Base Minimum Fare</span>
+<span class="text-on-surface font-medium">₹30.00</span>
+</div>
+<div class="flex justify-between items-center text-body-sm text-body-sm py-1">
+<span class="text-secondary">Distance Cost (5.4 km @ ₹8/km)</span>
+<span class="text-on-surface font-medium">₹43.20</span>
+</div>
+<div class="flex justify-between items-center text-body-sm text-body-sm py-1">
+<span class="text-secondary">Platform Ride Incentive / Coupon (RUSH50)</span>
+<span class="text-on-tertiary-container font-semibold">- ₹24.20</span>
+</div>
+<div class="h-0.5 bg-surface-container my-1"></div>
+<div class="flex justify-between items-center text-body-md text-body-md py-1">
+<span class="font-semibold text-on-surface">Net Fare Charged to Rider</span>
+<span class="font-bold text-on-surface">₹68.00</span>
+</div>
+<div class="mt-space-xs pt-space-xs p-2 rounded bg-surface-container-lowest flex justify-between items-center text-label-md font-label-md">
+<div>
+<span class="text-secondary block">Platform Take-rate (10%)</span>
+<strong class="text-on-surface">₹6.80</strong>
+</div>
+<div class="text-right">
+<span class="text-secondary block">Captain Net Direct Payout</span>
+<strong class="text-on-tertiary-container font-semibold">₹54.40</strong>
+</div>
+</div>
+</div>
+<!-- Passenger Feedback Note -->
+<div class="p-space-md rounded bg-surface-container-low flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">format_quote</span>
+<div>
+<div class="font-label-sm text-label-sm text-secondary font-semibold">PASSENGER RATING & VERBATIM</div>
+<div class="font-body-sm text-body-sm text-on-surface mt-1 italic">
+              "Great polite captain, helmet was clean and sanitized. 5 Stars."
+            </div>
+<div class="flex items-center gap-1 mt-1 text-on-surface font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">star</span>
+<span class="material-symbols-outlined text-[14px]">star</span>
+<span class="material-symbols-outlined text-[14px]">star</span>
+<span class="material-symbols-outlined text-[14px]">star</span>
+<span class="material-symbols-outlined text-[14px]">star</span>
+<span class="ml-1 text-secondary font-normal">• Aarav Sharma</span>
+</div>
+</div>
+</div>
+<!-- Drawer Quick Terminal Actions -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<button class="px-space-md py-2.5 rounded bg-surface-container-low text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-container transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Download Invoice</span>
+</button>
+<button class="px-space-md py-2.5 rounded bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-inverse-surface transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Close Trip Audit</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

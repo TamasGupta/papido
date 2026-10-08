@@ -1,72 +1,54 @@
 "use client";
 
-import { Suspense, use, useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 
-export default function RiderRidePage({ params }: { params: Promise<{ id: string }> }) {
-  return (
-    <Suspense fallback={<main className="flex-1 bg-slate-50 p-6">Loading…</main>}>
-      <RiderRideInner params={params} />
-    </Suspense>
-  );
-}
+import { Shield, MapPin, Phone, MessageCircle, Clock, Loader2 } from "lucide-react";
 
-function RiderRideInner({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params);
-  const [ride, setRide] = useState<any>(null);
+export default function RiderAssignedArriving() {
   const [pin, setPin] = useState("");
   const [msg, setMsg] = useState("");
 
-  async function load() {
-    const res = await fetch(`/api/rides/${id}`);
-    const data = await res.json();
-    if (data.success) setRide(data.data);
-  }
-  useEffect(() => {
-    load();
-    const t = setInterval(load, 3000);
-    return () => clearInterval(t);
-  }, [id]);
-
-  async function act(action: string, extra?: object) {
-    const res = await fetch(`/api/rides/${id}`, {
+  async function verifyAndStart() {
+    if (!pin) return setMsg("Enter the passenger PIN");
+    const res = await fetch("/api/rides", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ action, ...extra }),
+      body: JSON.stringify({ action: "start", pin }),
     });
     const data = await res.json();
-    setMsg(data.success ? `Ride ${action} ✓` : data.error?.message ?? "Failed");
-    load();
+    setMsg(data.success ? "Ride started ✓" : data.error?.message ?? "Failed");
+    if (data.success) window.location.href = "/rider/ride/" + data.data?.id;
   }
-
-  if (!ride) return <main className="flex-1 bg-slate-50 p-6">Loading…</main>;
 
   return (
     <main className="flex-1 bg-slate-50 p-6">
-      <h1 className="text-xl font-bold text-slate-900">Ride #{ride.id.slice(-6)}</h1>
-      <p className="mt-1 text-sm text-slate-500">Status: <span className="font-semibold text-slate-800">{ride.status}</span></p>
-      <p className="mt-2 text-slate-700">{ride.pickupAddress} → {ride.destinationAddress}</p>
+      <div className="max-w-md bg-white rounded-xl p-8 shadow-sm">
+        <h1 className="text-2xl font-bold text-slate-900 mb-4">Ride Assigned</h1>
+        <p className="text-slate-500 mb-6">
+          {pin ? "PIN verified — " : ""}Rider is on the way to pickup.
+        </p>
 
-      <div className="mt-6 max-w-md space-y-3">
-        {ride.status === "RIDER_ASSIGNED" && (
-          <button onClick={() => act("arrive")} className="w-full rounded-lg bg-green-600 py-3 font-semibold text-white">I've Arrived</button>
-        )}
-        {ride.status === "RIDER_ARRIVED" && (
-          <div className="flex gap-2">
-            <input value={pin} onChange={(e) => setPin(e.target.value)} placeholder="Enter passenger PIN" className="flex-1 rounded-lg border border-slate-300 px-3 py-2" />
-            <button onClick={() => act("start", { pin })} className="rounded-lg bg-green-600 px-4 font-semibold text-white">Start Ride</button>
+        {pin ? null : (
+          <div className="mb-4">
+            <p className="text-sm text-slate-500">Passenger PIN</p>
+            <input
+              value={pin}
+              onChange={(e) => setPin(e.target.value)}
+              placeholder="Enter PIN from passenger"
+              className="w-full rounded-lg border border-slate-300 px-3 py-2 mt-1"
+            />
           </div>
         )}
-        {ride.status === "RIDE_STARTED" && (
-          <button onClick={() => act("complete")} className="w-full rounded-lg bg-green-600 py-3 font-semibold text-white">Complete Ride</button>
-        )}
-        {ride.status === "RIDE_COMPLETED" && (
-          <div className="rounded-xl border border-slate-200 bg-white p-4">
-            <p className="font-semibold">Fare breakdown</p>
-            <p className="text-sm text-slate-600">Distance charge etc. configured via fare settings.</p>
-            <p className="mt-2 text-lg font-bold">Total ₹{ride.finalFare ?? ride.estimatedFare}</p>
-          </div>
-        )}
-        {msg && <p className="text-sm text-slate-600">{msg}</p>}
+
+        <button
+          onClick={verifyAndStart}
+          disabled={!pin}
+          className="w-full rounded-lg bg-emerald-600 py-3 font-semibold text-white disabled:opacity-60"
+        >
+          {pin ? "Start Ride" : "Verify & Start"}
+        </button>
+
+        {msg && <p className="mt-4 text-sm text-slate-600">{msg}</p>}
       </div>
     </main>
   );

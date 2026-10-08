@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-container": "#d6e0f4", "surface-container-high": "#dce9ff", "surface-container-highest": "#d3e4fe", "inverse-primary": "#c0c6db", "on-error-container": "#93000a", "on-tertiary": "#ffffff", "outline-variant": "#c6c6cd", "inverse-surface": "#213145", "surface-variant": "#d3e4fe", "secondary": "#555f70", "on-primary-fixed-variant": "#404758", "on-tertiary-fixed": "#002109", "surface-dim": "#cbdbf5", "outline": "#76777d", "on-surface": "#0b1c30", "surface-container-low": "#eff4ff", "secondary-fixed-dim": "#bdc7db", "primary-fixed": "#dce2f7", "on-surface-variant": "#45464c", "background": "#f8f9ff", "surface-tint": "#575e70", "tertiary": "#000000", "tertiary-fixed-dim": "#62df7d", "on-error": "#ffffff", "on-tertiary-container": "#009842", "on-primary-container": "#7d8497", "on-primary-fixed": "#141b2b", "primary-fixed-dim": "#c0c6db", "on-secondary-container": "#596374", "secondary-fixed": "#d9e3f7", "primary-container": "#141b2b", "tertiary-fixed": "#7ffc97", "on-secondary-fixed": "#121c2a", "surface-bright": "#f8f9ff", "on-primary": "#ffffff", "error-container": "#ffdad6", "on-background": "#0b1c30", "tertiary-container": "#002109", "surface": "#f8f9ff", "surface-container": "#e5eeff", "inverse-on-surface": "#eaf1ff", "surface-container-lowest": "#ffffff", "primary": "#000000", "on-secondary-fixed-variant": "#3d4757", "on-tertiary-fixed-variant": "#005320", "on-secondary": "#ffffff", "error": "#ba1a1a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "1.5rem", "gutter": "0.75rem", "space-sm": "0.5rem", "space-md": "0.75rem", "margin": "1rem", "space-lg": "1rem", "space-xs": "0.25rem" }, "fontFamily": { "body-lg": ["Inter"], "body-sm": ["Inter"], "body-md": ["Inter"], "headline-sm": ["Inter"], "display": ["Inter"], "subheading": ["Inter"], "headline-lg": ["Inter"], "headline-md": ["Inter"], "label-sm": ["Inter"], "code-otp": ["Inter"], "label-md": ["Inter"] }, "fontSize": { "body-lg": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "subheading": ["16px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-lg": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "code-otp": ["24px", { "lineHeight": "28px", "letterSpacing": "0.15em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }] } } } }</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-primary-container border-r border-outline/20 z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="px-space-lg py-space-lg border-b border-outline/20 flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="w-9 h-9 rounded bg-surface-container-lowest flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[22px]">two_wheeler</span></div><div><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-surface-container-lowest tracking-tight">PAPIDO</span><span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm uppercase">Ops</span></div><div class="font-label-sm text-label-sm text-on-primary-container tracking-wider uppercase">Ops Command BLR</div></div></div></div><div class="px-space-md py-space-sm border-b border-outline/20 bg-primary-container"><button class="w-full flex items-center justify-between px-space-md py-space-sm rounded bg-inverse-surface border border-outline/30 text-surface-container-lowest hover:bg-inverse-surface/80 transition-colors" type="button"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[16px] text-surface-container-lowest">location_city</span><div class="text-left"><div class="font-label-xs text-on-primary-container font-label-sm text-label-sm">Active Jurisdiction</div><div class="font-subheading text-body-sm text-surface-container-lowest truncate max-w-[140px]">BLR South &amp; East</div></div></div><span class="material-symbols-outlined text-[18px] text-on-primary-container">unfold_more</span></button></div><div class="px-space-md py-space-sm border-b border-outline/20"><div class="flex items-center justify-between px-space-sm py-1"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-on-tertiary-container animate-pulse"></span><span class="font-label-sm text-label-sm text-surface-container-lowest font-medium">Live Telemetry</span></div><span class="font-label-sm text-label-sm text-on-primary-container">99.98% SLA</span></div></div><div class="px-space-md pt-space-md"><div class="px-space-sm pb-space-xs font-label-sm text-label-sm text-on-primary-container uppercase tracking-wider">Operational Modules</div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-inverse-surface text-surface-container-lowest border-l-2 border-surface-container-lowest font-subheading"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded text-on-primary-container hover:bg-inverse-surface hover:text-surface-container-lowest transition-all group" data-path="live-operations-dispatch" href="#"><span class="material-symbols-outlined text-[20px] text-on-primary-container group-hover:text-surface-container-lowest transition-colors">radar</span><span class="font-body-md text-body-md">Live Ops &amp; Dispatch</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded text-on-primary-container hover:bg-inverse-surface hover:text-surface-container-lowest transition-all group" data-path="fleet-rider-partners" href="#"><span class="material-symbols-outlined text-[20px] text-on-primary-container group-hover:text-surface-container-lowest transition-colors">badge</span><span class="font-body-md text-body-md">Fleet &amp; Rider Partners</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded text-on-primary-container hover:bg-inverse-surface hover:text-surface-container-lowest transition-all group" data-path="trips-live-rides" href="#"><span class="material-symbols-outlined text-[20px] text-on-primary-container group-hover:text-surface-container-lowest transition-colors">route</span><span class="font-body-md text-body-md">Trips &amp; Live Rides</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded text-on-primary-container hover:bg-inverse-surface hover:text-surface-container-lowest transition-all group" data-path="surge-pricing-engine" href="#"><span class="material-symbols-outlined text-[20px] text-on-primary-container group-hover:text-surface-container-lowest transition-colors">trending_up</span><span class="font-body-md text-body-md">Surge &amp; Pricing Engine</span></a></nav></div></div><div class="p-space-md border-t border-outline/20"><div class="flex items-center justify-between p-space-sm rounded bg-inverse-surface border border-outline/30"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded bg-surface-container-lowest flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[18px]">admin_panel_settings</span></div><div class="text-left"><div class="font-body-sm text-body-sm text-surface-container-lowest font-medium leading-none">Ops Director</div><div class="font-label-sm text-label-sm text-on-primary-container mt-0.5">bengaluru-hq@papido.in</div></div></div><button class="text-on-primary-container hover:text-surface-container-lowest transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">logout</span></button></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest border-b border-outline/20 z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg flex-1"><div class="relative w-full max-w-md"><span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full pl-9 pr-space-md py-1.5 bg-surface border border-outline/30 rounded font-body-sm text-body-sm text-on-surface placeholder-outline focus:outline-none focus:border-primary transition-all" placeholder="Search Rider ID, Trip ID, KA-01-XX-0000..." type="text"/></div><div class="hidden xl:flex items-center gap-space-sm"><div class="flex items-center gap-space-xs px-2.5 py-1 rounded bg-error-container/30 border border-error/40 text-on-error-container font-label-md text-label-md"><span class="material-symbols-outlined text-error text-[16px]">fmd_bad</span><span class="font-medium">2 Active SOS</span></div><div class="flex items-center gap-space-xs px-2.5 py-1 rounded bg-surface-container-low border border-outline/30 text-secondary font-label-md text-label-md"><span class="material-symbols-outlined text-secondary text-[16px]">pending_actions</span><span class="font-medium">42 KYC Pending</span></div></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex flex-col text-right pr-space-md border-r border-outline/20"><div class="font-label-sm text-label-sm text-on-surface font-semibold">14:24:08 IST</div><div class="font-label-sm text-label-sm text-on-surface-variant">08:54:08 UTC</div></div><div class="flex items-center gap-space-xs"><button class="w-9 h-9 rounded border border-outline/30 flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><button class="w-9 h-9 rounded border border-outline/30 flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">refresh</span></button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full relative">
+<!-- Underlying Contextual Ops Screen: Surge & Pricing Engine (Semi-obfuscated by Modal Overlay) -->
+<div class="w-full p-space-lg space-y-space-lg select-none opacity-40 pointer-events-none filter blur-[1px]">
+<!-- Top KPI strip of base screen -->
+<div class="grid grid-cols-4 gap-space-md">
+<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase">Active Surge Geofences</span>
+<span class="font-headline-lg text-headline-lg text-on-surface mt-1">14 Clusters</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container mt-0.5">● 6 Under Throttle</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase">Mean Multiplier BLR</span>
+<span class="font-headline-lg text-headline-lg text-on-surface mt-1">1.42x</span>
+<span class="font-label-sm text-label-sm text-secondary mt-0.5">+0.18x vs 1-hr avg</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase">Unfulfilled Pings</span>
+<span class="font-headline-lg text-headline-lg text-error mt-1">3,412 / hr</span>
+<span class="font-label-sm text-label-sm text-error mt-0.5">Deficit: Peak Evening</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-sm flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase">Fleet Inflow Velocity</span>
+<span class="font-headline-lg text-headline-lg text-on-surface mt-1">+14.2 / 5m</span>
+<span class="font-label-sm text-label-sm text-secondary mt-0.5">Koramangala Axis</span>
+</div>
+</div>
+<!-- Base Screen Data Table Dummy -->
+<div class="w-full bg-surface-container-lowest rounded-lg shadow-sm p-space-lg">
+<div class="h-6 w-1/3 bg-surface-container rounded mb-4"></div>
+<div class="space-y-3">
+<div class="h-10 w-full bg-surface-container-low rounded"></div>
+<div class="h-10 w-full bg-surface-container-low rounded"></div>
+<div class="h-10 w-full bg-surface-container-low rounded"></div>
+</div>
+</div>
+</div>
+<!-- MODAL BACKDROP CONTAINER -->
+<div class="fixed inset-0 top-16 left-72 z-50 bg-inverse-surface/60 backdrop-blur-sm flex items-center justify-center p-space-lg overflow-y-auto">
+<!-- MODAL CARD: SHADCN / PRECISION MINIMALIST UTILITY -->
+<div class="w-full max-w-6xl bg-surface-container-lowest rounded-xl shadow-xl flex flex-col overflow-hidden my-auto max-h-[92vh]">
+<!-- 1. MODAL HEADER -->
+<div class="px-space-xl py-space-lg bg-surface-container-lowest flex flex-col gap-space-sm">
+<div class="flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm uppercase tracking-wider">
+              SIMULATION RUN #SIM-8492
+            </span>
+<span class="text-outline font-label-sm text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">
+              KORAMANGALA 4TH BLK CORRIDOR (1.82 km²)
+            </span>
+<div class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-low text-on-tertiary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm font-bold tracking-wide">COMPLETE (99.8% CONVERGENCE)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Export CSV / JSON</span>
+</button>
+<button class="px-3 py-1.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Re-run Custom Variables</span>
+</button>
+<button class="w-8 h-8 rounded bg-surface-container-low text-secondary hover:text-on-surface hover:bg-surface-container transition-colors flex items-center justify-center ml-1" onclick="this.closest('.fixed').style.display='none'" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col mt-0.5">
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight flex items-center gap-space-xs">
+<span>Surge Threshold Simulation Report</span>
+<span class="text-secondary font-headline-sm text-headline-sm font-normal">• Monte Carlo Elasticity Analysis</span>
+</h2>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">
+            Algorithmic dry-run across Koramangala, Indiranagar, and HSR clusters (14,200 simulated pings across 3,800 active fleet geo-nodes).
+          </p>
+</div>
+<!-- Simulation Parameters Summary Pills -->
+<div class="flex flex-wrap items-center gap-space-xs pt-space-xs mt-1">
+<div class="px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface flex items-center gap-1">
+<span class="text-secondary font-normal">Multiplier:</span>
+<span class="font-bold">1.8x</span>
+</div>
+<div class="px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface flex items-center gap-1">
+<span class="text-secondary font-normal">Base Surcharge:</span>
+<span class="font-bold">+₹25</span>
+</div>
+<div class="px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface flex items-center gap-1">
+<span class="text-secondary font-normal">Inflow Buffer:</span>
+<span class="font-bold">2.5 km Radius</span>
+</div>
+<div class="px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface flex items-center gap-1">
+<span class="text-secondary font-normal">Weather:</span>
+<span class="font-bold">Dry 28°C</span>
+</div>
+<div class="px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface flex items-center gap-1">
+<span class="text-secondary font-normal">Cooldown:</span>
+<span class="font-bold">30m Dynamic Step</span>
+</div>
+<div class="px-2.5 py-1 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1 ml-auto">
+<span class="material-symbols-outlined text-[14px]">history</span>
+<span>Seed: #MC-0982-A</span>
+</div>
+</div>
+</div>
+<!-- SCROLLABLE BODY AREA -->
+<div class="flex-1 overflow-y-auto px-space-xl py-space-md space-y-space-lg bg-surface">
+<!-- 2. EXECUTIVE IMPACT SCORECARD (4 KPI Cards) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- KPI 1 -->
+<div class="p-space-md bg-surface-container-lowest rounded-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-sm text-label-sm uppercase font-semibold">Projected Fleet Inflow</span>
+<span class="material-symbols-outlined text-[18px]">two_wheeler</span>
+</div>
+<div class="mt-space-xs font-display text-display text-on-surface font-bold">
+                +38 <span class="font-subheading text-subheading font-medium text-secondary">Captains / 15m</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs bg-surface-container-low px-2 py-1 rounded flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-semibold">+27.4% supply relief</span>
+<span class="font-label-sm text-label-sm text-secondary">vs -46 deficit</span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="p-space-md bg-surface-container-lowest rounded-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-sm text-label-sm uppercase font-semibold">Unfulfilled Demand Drop</span>
+<span class="material-symbols-outlined text-[18px]">trending_down</span>
+</div>
+<div class="mt-space-xs font-display text-display text-on-surface font-bold flex items-baseline gap-1.5">
+<span>42.8%</span>
+<span class="font-subheading text-subheading text-on-tertiary-container font-bold">➔ 8.4%</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs bg-surface-container-low px-2 py-1 rounded flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-semibold">-34.4% Churn delta</span>
+<span class="font-label-sm text-label-sm text-secondary">792 saved bookings</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="p-space-md bg-surface-container-lowest rounded-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-sm text-label-sm uppercase font-semibold">Mean Realized Fare</span>
+<span class="material-symbols-outlined text-[18px]">currency_rupee</span>
+</div>
+<div class="mt-space-xs font-display text-display text-on-surface font-bold">
+                ₹89.50
+              </div>
+</div>
+<div class="mt-space-sm pt-space-xs bg-surface-container-low px-2 py-1 rounded flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-semibold">+31.6% yield</span>
+<span class="font-label-sm text-label-sm text-secondary">Base ₹68.00 baseline</span>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="p-space-md bg-surface-container-lowest rounded-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-sm text-label-sm uppercase font-semibold">Passenger Acceptance</span>
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div class="mt-space-xs font-display text-display text-on-surface font-bold">
+                86.2%
+              </div>
+</div>
+<div class="mt-space-sm pt-space-xs bg-surface-container-low px-2 py-1 rounded flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-semibold">100% Statutory Compliant</span>
+<span class="font-label-sm text-label-sm text-secondary">Karnataka &lt;2.5x</span>
+</div>
+</div>
+</div>
+<!-- 3. DUAL COMPARATIVE CHARTS -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Chart A: Supply Inflow vs Elastic Demand Curve (7 Cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-lg rounded-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<div>
+<h3 class="font-subheading text-subheading text-on-surface font-semibold">
+                  Supply Inflow vs. Elastic Demand Curve
+                </h3>
+<p class="font-label-sm text-label-sm text-secondary">15-minute simulated steps (T+0 to T+60m interval)</p>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface">
+<span class="w-3 h-1 bg-on-tertiary-container rounded-full"></span>
+<span>Supply (Captains)</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface">
+<span class="w-3 h-1 bg-primary rounded-full"></span>
+<span>Demand Volume</span>
+</div>
+</div>
+</div>
+<!-- SVG Data Visualization -->
+<div class="relative w-full h-56 pt-2">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 540 180">
+<!-- Background Grid Lines -->
+<line class="text-surface-container-high" stroke="currentColor" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="540" y1="20" y2="20"></line>
+<line class="text-surface-container-high" stroke="currentColor" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="540" y1="70" y2="70"></line>
+<line class="text-surface-container-high" stroke="currentColor" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="540" y1="120" y2="120"></line>
+<line class="text-surface-container-high" stroke="currentColor" stroke-width="1" x1="0" x2="540" y1="160" y2="160"></line>
+<!-- Equilibrium Vertical Marker at T+18m (x = 162) -->
+<line class="text-outline" stroke="currentColor" stroke-dasharray="2 2" stroke-width="1.5" x1="162" x2="162" y1="10" y2="160"></line>
+<!-- Supply Inflow Path (Rising Curve: 48 -> 92) -->
+<path d="M 0 135 C 70 125, 120 90, 162 76 C 240 52, 380 40, 540 32" fill="none" stroke="#009842" stroke-linecap="round" stroke-width="3"></path>
+<!-- Demand Volume Path (Declining to Equilibrium: 140 -> 98) -->
+<path d="M 0 25 C 60 35, 110 58, 162 76 C 220 94, 380 96, 540 98" fill="none" stroke="#0b1c30" stroke-linecap="round" stroke-width="3"></path>
+<!-- Equilibrium Point Dot -->
+<circle cx="162" cy="76" fill="#009842" r="6"></circle>
+<circle cx="162" cy="76" fill="#009842" opacity="0.25" r="10"></circle>
+<!-- Node Markers on Supply -->
+<circle cx="0" cy="135" fill="#009842" r="3"></circle>
+<circle cx="162" cy="76" fill="#ffffff" r="3"></circle>
+<circle cx="540" cy="32" fill="#009842" r="3"></circle>
+<!-- Node Markers on Demand -->
+<circle cx="0" cy="25" fill="#0b1c30" r="3"></circle>
+<circle cx="540" cy="98" fill="#0b1c30" r="3"></circle>
+</svg>
+<!-- Equilibrium Badge Floating Callout -->
+<div class="absolute left-[30%] top-3 bg-surface-container-lowest px-2.5 py-1.5 rounded-lg shadow-md flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container animate-ping"></span>
+<div>
+<div class="font-label-sm text-label-sm font-bold text-on-surface leading-tight">Optimal Equilibrium: T+18 min</div>
+<div class="font-label-sm text-label-sm text-secondary">Surge throttles auto to 1.3x</div>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-center text-secondary font-label-sm text-label-sm pt-2">
+<span>T+0m (Baseline Deficit)</span>
+<span>T+15m</span>
+<span>T+30m</span>
+<span>T+45m</span>
+<span>T+60m (Stabilized State)</span>
+</div>
+<!-- Key Metric Footer Pill -->
+<div class="mt-space-sm p-space-sm bg-surface-container-low rounded flex items-center justify-between">
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">tune</span>
+<span>Active Damping Factor: <strong class="text-on-surface">λ = 0.84</strong> (Reversion triggered once idle fleet ratio crosses 1.25)</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-semibold">Zero Surge Oscillation</span>
+</div>
+</div>
+<!-- Chart B: Dynamic Fare Elasticity by Distance Band (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-space-lg rounded-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-subheading text-subheading text-on-surface font-semibold">
+                  Elasticity by Distance Band
+                </h3>
+<span class="font-label-sm text-label-sm text-secondary">Conversion vs Distance</span>
+</div>
+<p class="font-label-sm text-label-sm text-secondary mb-4">
+                Passenger tolerance drop-off under 1.8x multiplier
+              </p>
+<!-- Distance Band Rows -->
+<div class="space-y-3.5">
+<!-- Band 1: < 2 km -->
+<div class="space-y-1">
+<div class="flex justify-between items-center font-label-md text-label-md">
+<span class="font-medium text-on-surface">Hyperlocal (&lt; 2 km)</span>
+<div class="flex items-center gap-2">
+<span class="text-secondary">₹42 avg</span>
+<span class="font-bold text-on-tertiary-container">94% Conversion</span>
+</div>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container overflow-hidden flex">
+<div class="bg-on-tertiary-container h-full rounded-full" style="width: 94%;"></div>
+</div>
+<div class="flex justify-between text-secondary font-label-sm text-label-sm">
+<span>High urgency (Office transit &amp; Metro shuttles)</span>
+<span>Churn: 6%</span>
+</div>
+</div>
+<!-- Band 2: 2 - 5 km -->
+<div class="space-y-1">
+<div class="flex justify-between items-center font-label-md text-label-md">
+<span class="font-medium text-on-surface">Core Urban (2 - 5 km)</span>
+<div class="flex items-center gap-2">
+<span class="text-secondary">₹88 avg</span>
+<span class="font-bold text-on-tertiary-container">88% Conversion</span>
+</div>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container overflow-hidden flex">
+<div class="bg-on-tertiary-container h-full rounded-full" style="width: 88%;"></div>
+</div>
+<div class="flex justify-between text-secondary font-label-sm text-label-sm">
+<span>Koramangala ➔ Indiranagar Axis</span>
+<span>Churn: 12%</span>
+</div>
+</div>
+<!-- Band 3: 5 - 8 km -->
+<div class="space-y-1">
+<div class="flex justify-between items-center font-label-md text-label-md">
+<span class="font-medium text-on-surface">Medium Commute (5 - 8 km)</span>
+<div class="flex items-center gap-2">
+<span class="text-secondary">₹134 avg</span>
+<span class="font-bold text-on-surface">82% Conversion</span>
+</div>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container overflow-hidden flex">
+<div class="bg-secondary h-full rounded-full" style="width: 82%;"></div>
+</div>
+<div class="flex justify-between text-secondary font-label-sm text-label-sm">
+<span>Peak transit to Bellandur Tech Park</span>
+<span>Churn: 18%</span>
+</div>
+</div>
+<!-- Band 4: > 8 km -->
+<div class="space-y-1">
+<div class="flex justify-between items-center font-label-md text-label-md">
+<span class="font-medium text-on-surface">Extended Arterial (&gt; 8 km)</span>
+<div class="flex items-center gap-2">
+<span class="text-secondary">₹195 avg</span>
+<span class="font-bold text-error">78% Conversion</span>
+</div>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container overflow-hidden flex">
+<div class="bg-outline h-full rounded-full" style="width: 78%;"></div>
+</div>
+<div class="flex justify-between text-secondary font-label-sm text-label-sm">
+<span>Sub-optimal substitution to Metro / BMTC</span>
+<span class="text-error font-medium">Churn: 22%</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span>Overall Corridor Blended Acceptance:</span>
+<span class="font-bold text-on-surface">86.2% High Elasticity Fit</span>
+</div>
+</div>
+</div>
+<!-- 4. MICRO-ZONE SENSITIVITY BREAKDOWN TABLE -->
+<div class="bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden">
+<div class="px-space-lg py-space-md bg-surface-container-lowest flex items-center justify-between">
+<div>
+<h3 class="font-subheading text-subheading text-on-surface font-semibold">
+                Micro-Zone Cluster Sensitivity Breakdown
+              </h3>
+<p class="font-label-sm text-label-sm text-secondary">
+                Segmented corridor supply-demand imbalances &amp; recommended multiplier calibration
+              </p>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-secondary">3 Micro-Zones Analyzed</span>
+</div>
+</div>
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-low font-label-sm text-label-sm text-secondary uppercase tracking-wider">
+<tr>
+<th class="py-space-sm px-space-lg">Micro-Zone Corridor</th>
+<th class="py-space-sm px-space-md">Idle Fleet</th>
+<th class="py-space-sm px-space-md">Net Deficit</th>
+<th class="py-space-sm px-space-md">Modeled Multiplier</th>
+<th class="py-space-sm px-space-md">ETA Reduction</th>
+<th class="py-space-sm px-space-md">Projected Conversion</th>
+<th class="py-space-sm px-space-lg text-right">Health SLA</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container text-on-surface">
+<!-- Zone 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="font-subheading text-body-md font-semibold text-on-surface">Sony World Junction &amp; 80ft Rd</div>
+<div class="font-label-sm text-label-sm text-secondary">High transit commercial core • 0.64 km²</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-bold text-on-surface">22 Idle</span>
+<span class="block font-label-sm text-label-sm text-secondary">3.4 min pickup</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-bold font-label-sm text-label-sm">-18 Deficit</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="font-bold text-on-surface">1.8x</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container font-label-sm text-label-sm text-secondary">+₹25</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-medium">
+<span class="text-secondary line-through">6.2m</span>
+<span class="text-on-tertiary-container font-bold ml-1">➔ 2.8m</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-2">
+<span class="font-bold text-on-surface">89.4%</span>
+<div class="w-16 h-1.5 rounded-full bg-surface-container overflow-hidden">
+<div class="bg-on-tertiary-container h-full" style="width: 89.4%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-low text-on-tertiary-container font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+                      Optimal
+                    </span>
+</td>
+</tr>
+<!-- Zone 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="font-subheading text-body-md font-semibold text-on-surface">Koramangala 4th Block Club Rd</div>
+<div class="font-label-sm text-label-sm text-secondary">F&amp;B Night Hub • 0.58 km²</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-bold text-on-surface">14 Idle</span>
+<span class="block font-label-sm text-label-sm text-secondary">4.1 min pickup</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-bold font-label-sm text-label-sm">-16 Deficit</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="font-bold text-on-surface">1.9x</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container font-label-sm text-label-sm text-secondary">+₹28</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-medium">
+<span class="text-secondary line-through">7.1m</span>
+<span class="text-on-tertiary-container font-bold ml-1">➔ 3.2m</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-2">
+<span class="font-bold text-on-surface">84.1%</span>
+<div class="w-16 h-1.5 rounded-full bg-surface-container overflow-hidden">
+<div class="bg-on-tertiary-container h-full" style="width: 84.1%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-low text-on-tertiary-container font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+                      Optimal
+                    </span>
+</td>
+</tr>
+<!-- Zone 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-lg">
+<div class="font-subheading text-body-md font-semibold text-on-surface">HSR Sector 1 Peripheral Spillover</div>
+<div class="font-label-sm text-label-sm text-secondary">Buffer arterial corridor • 0.60 km²</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-bold text-on-surface">12 Idle</span>
+<span class="block font-label-sm text-label-sm text-secondary">2.8 min pickup</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-bold font-label-sm text-label-sm">-12 Deficit</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="font-bold text-on-surface">1.4x</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container font-label-sm text-label-sm text-secondary">+₹15</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-medium">
+<span class="text-secondary line-through">5.4m</span>
+<span class="text-on-tertiary-container font-bold ml-1">➔ 3.1m</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-2">
+<span class="font-bold text-on-surface">91.0%</span>
+<div class="w-16 h-1.5 rounded-full bg-surface-container overflow-hidden">
+<div class="bg-on-tertiary-container h-full" style="width: 91.0%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                      Low Deficit
+                    </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- 5. GUARDRAILS & GOVERNANCE VERIFICATION MATRIX -->
+<div class="bg-surface-container-lowest p-space-lg rounded-lg shadow-sm">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-on-tertiary-container">gavel</span>
+<h3 class="font-subheading text-subheading text-on-surface font-semibold">
+                Autonomous Governance &amp; Regulatory Safeguards
+              </h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+              ALL 4 VERIFICATIONS PASSED
+            </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Safeguard 1 -->
+<div class="p-space-md rounded bg-surface-container-low flex items-start gap-space-md">
+<div class="w-7 h-7 rounded-full bg-surface-container-lowest text-on-tertiary-container flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Anti-Gouging Statutory Ceiling</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-bold">Compliant</span>
+</div>
+<p class="font-label-sm text-label-sm text-secondary mt-0.5">
+                  Karnataka Motor Vehicle Aggregator Guidelines (2.5x regulatory cap). Modeled peak is strictly 1.92x, preventing accidental surcharge violations.
+                </p>
+</div>
+</div>
+<!-- Safeguard 2 -->
+<div class="p-space-md rounded bg-surface-container-low flex items-start gap-space-md">
+<div class="w-7 h-7 rounded-full bg-surface-container-lowest text-on-tertiary-container flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">payments</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Captain Earning Parity</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-bold">Ring-Fenced</span>
+</div>
+<p class="font-label-sm text-label-sm text-secondary mt-0.5">
+                  100% of the dynamic surcharge (+₹25) is transferred directly into driver partner payout wallets without platform commission cuts.
+                </p>
+</div>
+</div>
+<!-- Safeguard 3 -->
+<div class="p-space-md rounded bg-surface-container-low flex items-start gap-space-md">
+<div class="w-7 h-7 rounded-full bg-surface-container-lowest text-on-tertiary-container flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">speed</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Auto-Throttle Decay Circuit</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-bold">Armed</span>
+</div>
+<p class="font-label-sm text-label-sm text-secondary mt-0.5">
+                  Exponential moving cooldown decay will depress surge to 1.0x automatically if the local idle captain-to-ping ratio crosses 1.25.
+                </p>
+</div>
+</div>
+<!-- Safeguard 4 -->
+<div class="p-space-md rounded bg-surface-container-low flex items-start gap-space-md">
+<div class="w-7 h-7 rounded-full bg-surface-container-lowest text-on-tertiary-container flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">cloud</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Rain Fallback Override</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-bold">Standby</span>
+</div>
+<p class="font-label-sm text-label-sm text-secondary mt-0.5">
+                  IMD Doppler precipitation API trigger armed. Rain surge caps will auto-lock to fixed Flat +₹20 if rainfall exceeds 5.0 mm/hr.
+                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 6. MODAL FOOTER & ACTION TRIGGER STRIP -->
+<div class="px-space-xl py-space-md bg-surface-container-lowest flex items-center justify-between shadow-md">
+<!-- Model Confidence Telemetry -->
+<div class="flex items-center gap-space-sm text-secondary">
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container">analytics</span>
+<div class="font-label-sm text-label-sm">
+<span class="text-on-surface font-semibold">Model Confidence: 96.4%</span>
+<span class="text-secondary ml-1">• Derived from 60-day historical corridor telemetry (Kor-4B)</span>
+</div>
+</div>
+<!-- Action Triggers -->
+<div class="flex items-center gap-space-sm">
+<button class="px-4 py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-body-sm text-body-sm font-semibold" type="button">
+            Save Simulation to Staging
+          </button>
+<button class="px-5 py-2.5 rounded-lg bg-on-tertiary-container text-on-tertiary hover:opacity-95 active:scale-[0.99] transition-all font-body-sm text-body-sm font-bold flex items-center gap-2 shadow-sm" onclick="alert('Surge Multiplier (1.8x) Deployed to Geofence #GF-08 Corridor.')" type="button">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>Deploy Surge Multiplier to Fleet (Activate #GF-08)</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

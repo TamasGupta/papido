@@ -43,8 +43,8 @@ function PassengerRideInner({ params }: { params: Promise<{ id: string }> }) {
     <main className="flex-1 bg-slate-50 p-6">
       <h1 className="text-xl font-bold text-slate-900">Your ride</h1>
       <div className="mt-4 max-w-md rounded-xl border border-slate-200 bg-white p-6">
-        <p className="text-lg font-semibold text-green-700">{LABELS[ride.status] ?? ride.status}</p>
-        <p className="mt-2 text-sm text-slate-600">{ride.pickupAddress} → {ride.destinationAddress}</p>
+        <p className="text-lg font-semibold text-emerald-700">{LABELS[ride.status] ?? ride.status}</p>
+        <p className="mt-2 text-slate-600">{ride.pickupAddress} → {ride.destinationAddress}</p>
         <p className="mt-2 text-sm text-slate-600">Estimated ₹{ride.estimatedFare} · {ride.estimatedDistance} km</p>
         {["RIDER_ARRIVED", "RIDER_ASSIGNED", "RIDER_ARRIVING"].includes(ride.status) && (
           <p className="mt-4 rounded-lg bg-amber-50 p-3 text-center text-lg font-bold tracking-widest text-amber-800">
