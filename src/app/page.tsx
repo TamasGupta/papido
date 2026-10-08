@@ -13,6 +13,7 @@ export default function PassengerHome() {
   const [center, setCenter] = useState<[number, number]>([12.9716, 77.5946]);
   const [locStatus, setLocStatus] = useState("");
 
+  // GPS on mount - match screen design
   useEffect(() => {
     if (!navigator.geolocation || !window.isSecureContext) {
       setLocStatus("Location needs localhost or HTTPS.");
@@ -60,6 +61,7 @@ export default function PassengerHome() {
 
   return (
     <main className="flex flex-1 bg-slate-50 min-h-screen">
+      {/* Fixed header matching screen design */}
       <header className="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl pt-4 shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
         <div className="h-14 px-margin flex items-center justify-between max-w-[420px] mx-auto w-full">
           <div className="flex items-center gap-2 min-w-0">
@@ -109,6 +111,7 @@ export default function PassengerHome() {
         {fareMsg && <p className="text-sm text-slate-700 mt-2">{fareMsg}</p>}
       </section>
 
+      {/* Bottom booking bar matching screen design */}
       <section className="mx-auto grid max-w-5xl gap-6 px-6 pb-20 md:grid-cols-3">
         {[
           {

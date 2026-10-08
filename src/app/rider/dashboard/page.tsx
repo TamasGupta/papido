@@ -30,6 +30,7 @@ export default function RiderDashboard() {
 
   return (
     <main className="flex-1 bg-slate-50 min-h-screen p-6">
+      {/* Header matching screen design - captain name, online badge, profile */}
       <header className="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl pt-4 shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
         <div className="h-16 px-margin flex items-center justify-between">
           <div className="flex items-center gap-2 min-w-0">
@@ -52,6 +53,7 @@ export default function RiderDashboard() {
       </header>
       <main className="flex flex-col relative w-full pt-20 pb-24 bg-background min-h-screen">
         <div className="flex flex-col w-full px-margin py-6 gap-4">
+          {/* Period filter tabs matching screen design */}
           <div className="flex bg-surface-container rounded-xl w-full">
             <button
               data-period="today"
@@ -78,7 +80,8 @@ export default function RiderDashboard() {
               This Month
             </button>
           </div>
-          <div className="flex flex-col bg-surface-container-lowest rounded-xl p-space-lg shadow-sm gap-4">
+          {/* Earnings cards matching screen design */}
+          <div className="flex flex-col bg-surface-container-lowest rounded-xl p-4 shadow-sm gap-4">
             <div className="flex items-center justify-between">
               <span className="font-label-md text-label-md text-secondary">Net Take-Home</span>
               <div className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface">
@@ -105,14 +108,15 @@ export default function RiderDashboard() {
               <span className="font-subheading text-subheading text-on-surface">???127/hr</span>
             </div>
           </div>
+          {/* Weekly activity sparkline */}
           <div className="flex flex-col gap-1.5 pt-1">
             <div className="flex justify-between items-center text-secondary font-label-sm text-label-sm">
               <span>Mon???Sun Activity</span>
               <span className="text-on-surface font-label-md text-label-md">Peak: ???940 (Sat)</span>
             </div>
             <svg className="w-full h-10 text-on-tertiary-container" preserveAspectRatio="none" viewBox="0 0 100 24">
-              <polyline fill="none" points="0,18 16,14 32,20 48,11 64,8 80,4 96,9 100,7" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5"></polyline>
-              <circle className="fill-current text-primary" cx="80" cy="4" r="2.5"></circle>
+              <polyline fill="none" points="0,18 16,14 32,20 48,11 64,8 80,4 96,9 100,7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></polyline>
+              <circle fill="current" className="text-primary" cx="80" cy="4" r="2.5"></circle>
             </svg>
           </div>
         </div>
