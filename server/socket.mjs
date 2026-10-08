@@ -16,5 +16,6 @@ io.on("connection", (socket) => {
   });
 });
 
-const port = process.env.SOCKET_PORT || 4000;
+const port = process.env.PORT || process.env.SOCKET_PORT || 4000;
 httpServer.listen(port, () => console.log(`Socket.IO on :${port}`));
+
