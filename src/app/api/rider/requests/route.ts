@@ -14,5 +14,5 @@ export async function GET() {
     orderBy: { requestedAt: "asc" },
     take: 20,
   });
-  return ok(rides);
+  return ok({ rides, rider: { status: rider.status, isOnline: rider.isOnline } });
 }
