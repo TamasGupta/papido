@@ -36,6 +36,18 @@ export default function RiderDashboard() {
         </button>
       </div>
       <LocationTracker enabled={online === true} />
+      <nav className="mt-4 flex gap-2 text-sm">
+        {[
+          ["Dashboard", "/rider/dashboard"],
+          ["Requests", "/rider/requests"],
+          ["Rides", "/rider/rides"],
+          ["Onboarding", "/rider/onboarding"],
+        ].map(([label, href]) => (
+          <a key={label} href={href} className="rounded-lg border border-slate-200 bg-white px-4 py-2 font-semibold text-slate-700 hover:bg-slate-100">
+            {label}
+          </a>
+        ))}
+      </nav>
       {msg && <p className="mt-2 text-sm text-slate-600">{msg}</p>}
       <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4">
         {[
